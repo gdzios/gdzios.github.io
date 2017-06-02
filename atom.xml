@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>一碗汤不热</title>
+  <subtitle>既然青春留不住 不如做个大叔好</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://gdzios.github.io/"/>
+  <updated>2017-06-02T10:37:17.520Z</updated>
+  <id>http://gdzios.github.io/</id>
+  
+  <author>
+    <name>gdzios</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为Hexo添加文章置顶功能</title>
+    <link href="http://gdzios.github.io/2017/06/02/site2/"/>
+    <id>http://gdzios.github.io/2017/06/02/site2/</id>
+    <published>2017-06-02T05:21:30.000Z</published>
+    <updated>2017-06-02T10:37:17.520Z</updated>
+    
+    <content type="html"><![CDATA[<p>主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦）</p>
+<p><strong>想法</strong></p>
+<p>其实就是增加一个<code>top</code>值，在<code>hexo</code>生成<code>html</code>时，将<code>top</code>值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。</p>
+<a id="more"></a>
+<p><strong>修改</strong></p>
+<p>修改站点文件夹下<code>node_modules/hexo-generator-index/lib/generator.js</code>，在生成文章之前进行文章top值排序。</p>
+<p>增加代码</p>
+<pre><code>posts.data = posts.data.sort(function(a, b) {
+    if(a.top &amp;&amp; b.top) { // 两篇文章top都有定义
+    if(a.top == b.top) return b.date - a.date; // 若top值一样则按照文章日期降序排
+    else return b.top - a.top; // 否则按照top值降序排
+}
+else if(a.top &amp;&amp; !b.top) { // 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）
+    return -1;
+}
+else if(!a.top &amp;&amp; b.top) {
+    return 1;
+}
+else return b.date - a.date; // 都没定义按照文章日期降序排
+});
+</code></pre><p><strong>完整文件代码</strong></p>
+<pre><code>&apos;use strict&apos;;
+var pagination = require(&apos;hexo-pagination&apos;);
+module.exports = function(locals){
+  var config = this.config;
+  var posts = locals.posts;
+    posts.data = posts.data.sort(function(a, b) {
+        if(a.top &amp;&amp; b.top) { // 两篇文章top都有定义
+            if(a.top == b.top) return b.date - a.date; // 若top值一样则按照文章日期降序排
+            else return b.top - a.top; // 否则按照top值降序排
+        }
+        else if(a.top &amp;&amp; !b.top) { // 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）
+            return -1;
+        }
+        else if(!a.top &amp;&amp; b.top) {
+            return 1;
+        }
+        else return b.date - a.date; // 都没定义按照文章日期降序排
+    });
+  var paginationDir = config.pagination_dir || &apos;page&apos;;
+  return pagination(&apos;&apos;, posts, {
+    perPage: config.index_generator.per_page,
+    layout: [&apos;index&apos;, &apos;archive&apos;],
+    format: paginationDir + &apos;/%d/&apos;,
+    data: {
+      __index: true
+    }
+  });
+};
+
+
+&apos;use strict&apos;;
+
+var pagination = require(&apos;hexo-pagination&apos;);
+
+module.exports = function(locals) {
+  var config = this.config;
+  var posts = locals.posts.sort(config.index_generator.order_by);
+  var paginationDir = config.pagination_dir || &apos;page&apos;;
+
+  return pagination(&apos;&apos;, posts, {
+    perPage: config.index_generator.per_page,
+    layout: [&apos;index&apos;, &apos;archive&apos;],
+    format: paginationDir + &apos;/%d/&apos;,
+    data: {
+      __index: true
+    }
+  });
+};
+</code></pre><p><strong>使用</strong></p>
+<p>在文章中，增加top值定义，值越大，文章排序越靠前。top值默认为0，若不设置top，则不参与排序。示例：</p>
+<pre><code>title: 为Hexo添加文章置顶功能（三）
+categories: hexo
+tags: [文章置顶，一碗汤不热]
+top: 1
+date: 201-06-01 11:44:40
+
+## 标题
+
+正文
+</code></pre><p><strong>注意</strong></p>
+<p>這样修改是没有置顶那个标志的 但是能达到置顶功能就好了，哈哈。</p>
+<p>网站备份的时候，记得备份好文件node_modules/hexo-generator-index/lib/generator.js，因为这个文件既不是站点文件，也不是主题文件，而文件夹默认不参与git版本控制，所以迁移博客文件时很容易忽略。让我又想放弃hexo了（逃）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;想法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;其实就是增加一个&lt;code&gt;top&lt;/code&gt;值，在&lt;code&gt;hexo&lt;/code&gt;生成&lt;code&gt;html&lt;/code&gt;时，将&lt;code&gt;top&lt;/code&gt;值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="博客" scheme="http://gdzios.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="文章置顶" scheme="http://gdzios.github.io/tags/%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MarkdownPad免费激活注册</title>
+    <link href="http://gdzios.github.io/2017/05/16/writ/"/>
+    <id>http://gdzios.github.io/2017/05/16/writ/</id>
+    <published>2017-05-16T11:01:37.000Z</published>
+    <updated>2017-06-02T09:40:00.801Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>MarkdownPad 是 Windows 平台上一个功能完善的 Markdown 编辑器。应该说是最好用的了。但是免费版有一些限制，还好终于找到了可用的专业版激活码，免费共享给大家。</strong></p>
+<p><img src="http://i2.muimg.com/588926/97ddd2c3b014f81c.png" alt="公众号gdz_hz"></p>
+<a id="more"></a>
+<p><strong>专为 Markdown 打造</strong></p>
+<p>提供了语法高亮和方便的快捷键功能，给您最好的 Markdown 编写体验。</p>
+<p>来试一下：</p>
+<p><strong>粗体 </strong>(Ctrl+B) and <em>斜体</em> (Ctrl+I)<br>引用 (Ctrl+Q)<br>代码块 (Ctrl+K)<br>标题 1, 2, 3 (Ctrl+1, Ctrl+2, Ctrl+3)<br>列表 (Ctrl+U and Ctrl+Shift+O)<br>实时预览，所见即所得</p>
+<p>无需猜测您的语法是否正确；每当您敲击键盘，实时预览功能都会立刻准确呈现出文档的显示效果。</p>
+<p>为高级用户而设计的稳定的 Markdown 编辑器</p>
+<p>MarkdownPad 支持多种 Markdown 解析引擎，包括 标准 Markdown 、 Markdown 扩展 (包括表格支持) 以及 GitHub 风格 Markdown 。</p>
+<p>有了标签式多文档界面、PDF 导出、内置的图片上传工具、会话管理、拼写检查、自动保存、语法高亮以及内置的 CSS 管理器，您可以随心所欲地使用 MarkdownPad。</p>
+<p><strong>激活信息</strong></p>
+<p>邮箱地址：</p>
+<pre><code>Soar360@live.com
+</code></pre><p>授权秘钥：</p>
+<pre><code>GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE8qHqNY5QaaRxmO3YSMHxlv2EYpjdwLcPwfeTG7kUdnhKE0vVy4RidP6Y2wZ0q74f47fzsZo45JE2hfQBFi2O9Jldjp1mW8HUpTtLA2a5/sQytXJUQl/QKO0jUQY4pa5CCx20sV1ClOTZtAGngSOJtIOFXK599sBr5aIEFyH0K7H4BoNMiiDMnxt1rD8Vb/ikJdhGMMQr0R4B+L3nWU97eaVPTRKfWGDE8/eAgKzpGwrQQoDh+nzX1xoVQ8NAuH+s4UcSeQ==
+</code></pre><p>其他</p>
+<p>不知道为何，MarkdownPad 2 的注册私钥泄密了，按照这个逻辑，是可以做成一个注册机的。附送私钥如下。</p>
+<pre><code> -----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: DES-EDE3-CBC,CCE015B0820B9A3F
+4BiGKVEzt+cLBdilEZR+8Y0YHrarjNX4bT5XbQ5BgTcJwMYnARCKib+BgwX9wPUB
+3D7PUwt4m4OGemXXcC4ELUFyMqHIT6SILFSdTTIvnQbsWutx44zyJK9SlP/2uhG8
+JIUDdLWVv5kS8J/UcInC5bomKZ5SX3+0ziRpLWkgXoHJ5gjQ+fDNzAKLcNn7Bubq
+znjoSH8XuGnORp7d4FiRT5Vl9WpnBqyyFSkYwzDOK//iFgHyhYZ5BCInfQMX66Cj
+wk3Pax/ujSDzYalkkJe8o8VAcEisMoYhSTS9BnRpROn6V4UyAugWMPnEOgiBmO42
+HwLoqK7WXCe+wS1UiDnECU2wIU5Z8qL5oKEKFGukakK+mYXh8MHTkYq2ZQZBo8Vy
+venhBaolrViCWdkJ5MsuqarBJjyCeAS38GAJURxsKnd+Bp7gGAlNI/0OWIcrjIi4
+4o/0CaYRHR+PdeuJup5rUKPgGfMW0iOwmMncSM19hIiaU4/hHGYeXrL1aKfZX4ML
+YxWJ/i6u8U3gcJo/bOvjirxUZOLTfv3n5aDTcxU70ejgmmYLBaxKt32Ib9oLwnL8
+AUnWNRPZaNJ/X853ybsGu73vA/6HPw63g0EaNharg21Q1IhuggMvHJiN6Z9d4KGg
+Vio6++15SVcsyQEGZx+jjv95IEfgwUQXBmkNRZ/KJQQLkKuOuXuvakI5sWdNJLRo
+xY9W2lHMnY/Yi82V4P5odxFZOmAYK5DHCQ47gw9IzqGjCyxATAYgkoZR+PCP5y9n
+IZ8oRYbNpykXVvQC0JALgixIZaAjj30wXb1CcD3layQNkrp0O4qVzuqyT7e2aKEq
+XNeoB0uDNvn10L60QAOG5630uIIFRyXphZgrzScp97ABq7STQ7t4zTZhbmiwnPHq
+8xft+mO2rW3puYEHoEkQKwJcPUTpR/s67IIXQMs1y93WpJoOw7doumyNtAoR8EfK
+m/H4UoJhoiXL755n4CGnET+LEtuFO/0UwdWxj+u503ovWL021DAnKhrGPMpo73ga
+aL/OBSFSFyxY92qGqfMWNQOaoK5hCRhzp/8Pd+B1tjhnxUNOl1ulytmhJBigU5nV
+arkgJYmG+Ox15f1YWxmD1EhLOQLUgBruG04cjRnG4LXV+UBKRdcS3bECArFutlTw
+6ogbi8cbDJNBbGpnlfIbEgGEe423rCTuoLJcIZfIDvPDsMobd9lCgn2o95N3Ey4U
++UT1PEDEhXW0nggdvZGy8y4T0ZIJ6Tn4asWHTsqH1fQYEz3H51pMehfCbxbc6Bbh
+nuNyrjv0NSNJvOAn71tFPRf6vgO83h5EFS0ov5ASbWchuf7BFpebmOO04aVMXPBe
+3nfE1L5in5ApK7AyhfdSPpELCxBUQ0av4k/0yw/P2TRllybgjdoXjlsJqBn7rkqr
+4u1H7pytlEWt0mSgZenlGXrOOEaknUe40z9BHNxliA7ET1MQk6veFVfbSFjeVUDk
+fsFAVE88/KHyMMfGwwcuLdnQnOBHNJ8iJjJF+RZy93QzveZB22+m5cl9SNXIMcEA
+mOm4Q8CaLwwzZmF9NKV2CjlmUTqOszJv5abS5YdrPavAR6QxGjZfya3nA2ASd6HN
+-----END RSA PRIVATE KEY-----
+</code></pre><p><a href="https://w3cboy.com/post/2014/10/MarkdownPad%E6%B3%A8%E5%86%8C%E7%A0%81/" target="_blank" rel="external">原文地址</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;MarkdownPad 是 Windows 平台上一个功能完善的 Markdown 编辑器。应该说是最好用的了。但是免费版有一些限制，还好终于找到了可用的专业版激活码，免费共享给大家。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i2.muimg.com/588926/97ddd2c3b014f81c.png&quot; alt=&quot;公众号gdz_hz&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://gdzios.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="MarkdownPad" scheme="http://gdzios.github.io/tags/MarkdownPad/"/>
+    
+      <category term="MarkdownPad注册码" scheme="http://gdzios.github.io/tags/MarkdownPad%E6%B3%A8%E5%86%8C%E7%A0%81/"/>
+    
+      <category term="文本编辑工具" scheme="http://gdzios.github.io/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序开发之转发功能</title>
+    <link href="http://gdzios.github.io/2017/05/16/site/"/>
+    <id>http://gdzios.github.io/2017/05/16/site/</id>
+    <published>2017-05-16T10:28:08.000Z</published>
+    <updated>2017-06-01T05:21:44.498Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前无聊的时间调试了一个微信小程序。<br>利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？</p>
+<p>赶紧打开微信开发工具</p>
+<p>首先参考了一下:<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/share.html?t=20161221" target="_blank" rel="external">官方文档</a><br><img src="http://i.imgur.com/o5Hztx5.png" alt="分享图片"></p>
+<a id="more"></a>
+<p>然后添加转发的显示按钮</p>
+<p><code>wx.showShareMenu({
+withShareTicket: true
+})</code></p>
+<p>这里有很多朋友不知道“path”路径该怎么填，其实就是填当前页面的路径比如我的：<br><img src="http://i.imgur.com/Vtzp2Kk.png" alt="公众号gdz_hz"><br>页面的路径加id,这个id就是小程序的场景值：<br><img src="http://i2.muimg.com/588926/675477204471cd0b.png" alt="公众号gdz_hz"><br>这个path路径填正确了，转发后朋友们才能点金进入小程序<br>完成后，点击右上角有转发功能<br><img src="http://i4.buimg.com/588926/38ee7a2359c59c0d.png" alt=""></p>
+<p>真机测试也能进去就OK了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;之前无聊的时间调试了一个微信小程序。&lt;br&gt;利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？&lt;/p&gt;
+&lt;p&gt;赶紧打开微信开发工具&lt;/p&gt;
+&lt;p&gt;首先参考了一下:&lt;a href=&quot;https://mp.weixin.qq.com/debug/wxadoc/dev/api/share.html?t=20161221&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;http://i.imgur.com/o5Hztx5.png&quot; alt=&quot;分享图片&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://gdzios.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="微信小程序" scheme="http://gdzios.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+      <category term="转发功能" scheme="http://gdzios.github.io/tags/%E8%BD%AC%E5%8F%91%E5%8A%9F%E8%83%BD/"/>
+    
+      <category term="小程序开发" scheme="http://gdzios.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+</feed>
