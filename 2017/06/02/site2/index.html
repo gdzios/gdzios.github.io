@@ -109,17 +109,17 @@
 
 
 
-<meta name="description" content="主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦） 想法 其实就是增加一个top值，在hexo生成html时，将top值越高的排在前面就可以了，其实通过改时间也是可以得哈哈哈 修改 修改站点文件夹下node_modules/hexo-generator-index/lib/generator.js，在生成文章之前进行文章top值排">
+<meta name="description" content="主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦） 想法 其实就是增加一个top值，在hexo生成html时，将top值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。">
 <meta name="keywords" content="博客,文章置顶">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为Hexo添加文章置顶功能">
 <meta property="og:url" content="http://gdzios.github.io/2017/06/02/site2/index.html">
 <meta property="og:site_name" content="一碗汤不热">
-<meta property="og:description" content="主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦） 想法 其实就是增加一个top值，在hexo生成html时，将top值越高的排在前面就可以了，其实通过改时间也是可以得哈哈哈 修改 修改站点文件夹下node_modules/hexo-generator-index/lib/generator.js，在生成文章之前进行文章top值排">
-<meta property="og:updated_time" content="2017-06-02T09:29:37.875Z">
+<meta property="og:description" content="主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦） 想法 其实就是增加一个top值，在hexo生成html时，将top值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。">
+<meta property="og:updated_time" content="2017-06-02T09:40:02.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为Hexo添加文章置顶功能">
-<meta name="twitter:description" content="主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦） 想法 其实就是增加一个top值，在hexo生成html时，将top值越高的排在前面就可以了，其实通过改时间也是可以得哈哈哈 修改 修改站点文件夹下node_modules/hexo-generator-index/lib/generator.js，在生成文章之前进行文章top值排">
+<meta name="twitter:description" content="主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦） 想法 其实就是增加一个top值，在hexo生成html时，将top值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。">
 
 
 
@@ -374,12 +374,13 @@
       
         <p>主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦）</p>
 <p><strong>想法</strong></p>
-<p>其实就是增加一个top值，在hexo生成html时，将top值越高的排在前面就可以了，其实通过改时间也是可以得哈哈哈</p>
+<p>其实就是增加一个<code>top</code>值，在<code>hexo</code>生成<code>html</code>时，将<code>top</code>值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。</p>
+<a id="more"></a>
 <p><strong>修改</strong></p>
 <p>修改站点文件夹下<code>node_modules/hexo-generator-index/lib/generator.js</code>，在生成文章之前进行文章top值排序。</p>
 <p>增加代码</p>
 <pre><code>posts.data = posts.data.sort(function(a, b) {
-if(a.top &amp;&amp; b.top) { // 两篇文章top都有定义
+    if(a.top &amp;&amp; b.top) { // 两篇文章top都有定义
     if(a.top == b.top) return b.date - a.date; // 若top值一样则按照文章日期降序排
     else return b.top - a.top; // 否则按照top值降序排
 }
