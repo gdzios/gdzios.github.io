@@ -113,21 +113,21 @@
 
 
 
-<meta name="description" content="之前无聊的时间调试了一个微信小程序。利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？ 赶紧打开微信开发工具 首先参考了一下:官方文档">
+<meta name="description" content="前言之前无聊的时间调试了一个微信小程序。利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？ 赶紧打开微信开发工具 首先参考了一下:官方文档">
 <meta name="keywords" content="微信小程序,转发功能,小程序开发">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信小程序开发之转发功能">
 <meta property="og:url" content="http://gdzios.github.io/2017/05/16/site/index.html">
 <meta property="og:site_name" content="一碗汤不热">
-<meta property="og:description" content="之前无聊的时间调试了一个微信小程序。利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？ 赶紧打开微信开发工具 首先参考了一下:官方文档">
+<meta property="og:description" content="前言之前无聊的时间调试了一个微信小程序。利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？ 赶紧打开微信开发工具 首先参考了一下:官方文档">
 <meta property="og:image" content="http://i.imgur.com/o5Hztx5.png">
 <meta property="og:image" content="http://i.imgur.com/Vtzp2Kk.png">
 <meta property="og:image" content="http://i2.muimg.com/588926/675477204471cd0b.png">
 <meta property="og:image" content="http://i4.buimg.com/588926/38ee7a2359c59c0d.png">
-<meta property="og:updated_time" content="2017-06-01T05:21:44.498Z">
+<meta property="og:updated_time" content="2017-06-05T03:54:04.512Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序开发之转发功能">
-<meta name="twitter:description" content="之前无聊的时间调试了一个微信小程序。利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？ 赶紧打开微信开发工具 首先参考了一下:官方文档">
+<meta name="twitter:description" content="前言之前无聊的时间调试了一个微信小程序。利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？ 赶紧打开微信开发工具 首先参考了一下:官方文档">
 <meta name="twitter:image" content="http://i.imgur.com/o5Hztx5.png">
 
 
@@ -305,7 +305,7 @@
     <link itemprop="mainEntityOfPage" href="http://gdzios.github.io/2017/05/16/site/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="gdzios">
+      <meta itemprop="name" content="大叔">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/uploads/toxiang.png">
     </span>
@@ -403,11 +403,11 @@
       
 
       
-        <p>之前无聊的时间调试了一个微信小程序。<br>利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前无聊的时间调试了一个微信小程序。<br>利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？</p>
 <p>赶紧打开微信开发工具</p>
 <p>首先参考了一下:<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/share.html?t=20161221" target="_blank" rel="external">官方文档</a><br><img src="http://i.imgur.com/o5Hztx5.png" alt="分享图片"></p>
 <a id="more"></a>
-<p>然后添加转发的显示按钮</p>
+<h1 id="关键"><a href="#关键" class="headerlink" title="关键"></a>关键</h1><p>然后添加转发的显示按钮</p>
 <p><code>wx.showShareMenu({
 withShareTicket: true
 })</code></p>
@@ -421,7 +421,7 @@ withShareTicket: true
       
         
 <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/gdz_hz.jpg" alt="gdzios wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/uploads/gdz_hz.jpg" alt="大叔 wechat" style="width: 200px; max-width: 100%;"/>
     <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
 </div>
 
@@ -442,7 +442,7 @@ withShareTicket: true
   <ul class="post-copyright">
     <li class="post-copyright-author">
       <strong>本文作者：</strong>
-      gdzios
+      大叔
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
@@ -559,15 +559,24 @@ withShareTicket: true
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/toxiang.png"
-               alt="gdzios" />
-          <p class="site-author-name" itemprop="name">gdzios</p>
+               alt="大叔" />
+          <p class="site-author-name" itemprop="name">大叔</p>
            
-              <p class="site-description motion-element" itemprop="description">既然青春留不住 不如做个大叔好</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           
         </div>
         <nav class="site-state motion-element">
@@ -575,7 +584,7 @@ withShareTicket: true
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -597,7 +606,7 @@ withShareTicket: true
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -814,12 +823,16 @@ withShareTicket: true
           <div class="links-of-blogroll motion-element links-of-blogroll-inline">
             <div class="links-of-blogroll-title">
               <i class="fa  fa-fw fa-globe"></i>
-              友链
+              常用链接
             </div>
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://gdzios.eward.win/" title="福利" target="_blank">福利</a>
+                  <a href="http://www.w3school.com.cn" title="w3school" target="_blank">w3school</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://theme-next.iissnan.com/" title="NexT文档" target="_blank">NexT文档</a>
                 </li>
               
             </ul>
@@ -831,6 +844,22 @@ withShareTicket: true
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关键"><span class="nav-number">2.</span> <span class="nav-text">关键</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -852,7 +881,7 @@ withShareTicket: true
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">gdzios</span>
+  <span class="author" itemprop="copyrightHolder">大叔</span>
 </div>
 
 
