@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gdzios.eward.win/"/>
-  <updated>2017-06-05T03:51:58.157Z</updated>
+  <updated>2017-06-08T02:06:47.171Z</updated>
   <id>http://gdzios.eward.win/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://gdzios.eward.win/2017/06/05/site3/"/>
     <id>http://gdzios.eward.win/2017/06/05/site3/</id>
     <published>2017-06-05T01:39:28.000Z</published>
-    <updated>2017-06-05T03:51:58.157Z</updated>
+    <updated>2017-06-08T02:06:47.171Z</updated>
     
     <content type="html"><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>這篇文章主要介绍了java平时常见的一些异常报错信息，我以文档的形式记录下来，用来复习巩固及其面试用，平时早上地铁公交拿出手机可以看一下。</p>
 <h1 id="异常类基本就那两种类型："><a href="#异常类基本就那两种类型：" class="headerlink" title="异常类基本就那两种类型："></a>异常类基本就那两种类型：</h1><ol>
@@ -197,12 +197,15 @@
     <link href="http://gdzios.eward.win/2017/06/02/site2/"/>
     <id>http://gdzios.eward.win/2017/06/02/site2/</id>
     <published>2017-06-02T05:21:30.000Z</published>
-    <updated>2017-06-05T03:55:24.743Z</updated>
+    <updated>2017-06-08T01:23:57.081Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦）<br>其实就是增加一个<code>top</code>值，在<code>hexo</code>生成<code>html</code>时，将<code>top</code>值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。</p>
 <a id="more"></a>
 <h1 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h1><p>修改站点文件夹下<code>node_modules/hexo-generator-index/lib/generator.js</code>，在生成文章之前进行文章top值排序。</p>
-<p>增加代码</p>
+<pre><code>pst xxx
+scasca
+sdacajjfj
+</code></pre><p>增加代码</p>
 <pre><code>posts.data = posts.data.sort(function(a, b) {
     if(a.top &amp;&amp; b.top) { // 两篇文章top都有定义
     if(a.top == b.top) return b.date - a.date; // 若top值一样则按照文章日期降序排
@@ -217,7 +220,7 @@ else if(!a.top &amp;&amp; b.top) {
 else return b.date - a.date; // 都没定义按照文章日期降序排
 });
 </code></pre><p><strong>完整文件代码</strong></p>
-<pre><code>&apos;use strict&apos;;
+<pre><code>`&apos;use strict&apos;;
 var pagination = require(&apos;hexo-pagination&apos;);
 module.exports = function(locals){
   var config = this.config;
@@ -264,7 +267,7 @@ module.exports = function(locals) {
       __index: true
     }
   });
-};
+};`
 </code></pre><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在文章中，增加top值定义，值越大，文章排序越靠前。top值默认为0，若不设置top，则不参与排序。示例：</p>
 <pre><code>title: 为Hexo添加文章置顶功能（三）
 categories: hexo

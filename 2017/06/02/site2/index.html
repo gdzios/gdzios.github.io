@@ -13,6 +13,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -94,6 +101,17 @@
 
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
 
   <meta name="keywords" content="博客,文章置顶," />
 
@@ -106,7 +124,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/uploads/666.png?v=5.1.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
 
@@ -120,7 +138,7 @@
 <meta property="og:url" content="http://gdzios.eward.win/2017/06/02/site2/index.html">
 <meta property="og:site_name" content="一碗汤不热">
 <meta property="og:description" content="前言主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦）其实就是增加一个top值，在hexo生成html时，将top值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。">
-<meta property="og:updated_time" content="2017-06-05T03:55:24.743Z">
+<meta property="og:updated_time" content="2017-06-08T01:23:57.081Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为Hexo添加文章置顶功能">
 <meta name="twitter:description" content="前言主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦）其实就是增加一个top值，在hexo生成html时，将top值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。">
@@ -268,16 +286,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
-            
-            站点地图
-          </a>
-        </li>
-      
 
       
     </ul>
@@ -389,7 +397,10 @@
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦）<br>其实就是增加一个<code>top</code>值，在<code>hexo</code>生成<code>html</code>时，将<code>top</code>值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。</p>
 <a id="more"></a>
 <h1 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h1><p>修改站点文件夹下<code>node_modules/hexo-generator-index/lib/generator.js</code>，在生成文章之前进行文章top值排序。</p>
-<p>增加代码</p>
+<pre><code>pst xxx
+scasca
+sdacajjfj
+</code></pre><p>增加代码</p>
 <pre><code>posts.data = posts.data.sort(function(a, b) {
     if(a.top &amp;&amp; b.top) { // 两篇文章top都有定义
     if(a.top == b.top) return b.date - a.date; // 若top值一样则按照文章日期降序排
@@ -404,7 +415,7 @@ else if(!a.top &amp;&amp; b.top) {
 else return b.date - a.date; // 都没定义按照文章日期降序排
 });
 </code></pre><p><strong>完整文件代码</strong></p>
-<pre><code>&apos;use strict&apos;;
+<pre><code>`&apos;use strict&apos;;
 var pagination = require(&apos;hexo-pagination&apos;);
 module.exports = function(locals){
   var config = this.config;
@@ -451,7 +462,7 @@ module.exports = function(locals) {
       __index: true
     }
   });
-};
+};`
 </code></pre><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在文章中，增加top值定义，值越大，文章排序越靠前。top值默认为0，若不设置top，则不参与排序。示例：</p>
 <pre><code>title: 为Hexo添加文章置顶功能（三）
 categories: hexo
@@ -513,9 +524,9 @@ date: 201-06-01 11:44:40
       
         <div class="post-tags">
           
-            <a href="/tags/博客/" rel="tag"># 博客</a>
+            <a href="/tags/博客/" rel="tag"><i class="fa fa-tag"></i> 博客</a>
           
-            <a href="/tags/文章置顶/" rel="tag"># 文章置顶</a>
+            <a href="/tags/文章置顶/" rel="tag"><i class="fa fa-tag"></i> 文章置顶</a>
           
         </div>
       
@@ -950,6 +961,10 @@ date: 201-06-01 11:44:40
 </div>
 
 
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">全站共5.0k字</span>
+</div>
         
 <div class="busuanzi-count">
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -1124,5 +1139,7 @@ date: 201-06-01 11:44:40
 
   
 
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
 </body>
 </html>

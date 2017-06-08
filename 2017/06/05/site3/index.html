@@ -13,6 +13,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -94,6 +101,17 @@
 
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
+<script>
+    (function(){
+        if('123456'){
+            if (prompt('请输入文章密码') !== '123456'){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
 
   <meta name="keywords" content="java异常,异常处理,异常信息,java学习," />
 
@@ -106,7 +124,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/uploads/666.png?v=5.1.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
 
@@ -121,7 +139,7 @@
 <meta property="og:site_name" content="一碗汤不热">
 <meta property="og:description" content="目的這篇文章主要介绍了java平时常见的一些异常报错信息，我以文档的形式记录下来，用来复习巩固及其面试用，平时早上地铁公交拿出手机可以看一下。 异常类基本就那两种类型： Error Exception">
 <meta property="og:image" content="http://i.imgur.com/40LnvRk.jpg">
-<meta property="og:updated_time" content="2017-06-05T03:51:58.157Z">
+<meta property="og:updated_time" content="2017-06-08T02:06:47.171Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java面试集锦：常见的java异常信息">
 <meta name="twitter:description" content="目的這篇文章主要介绍了java平时常见的一些异常报错信息，我以文档的形式记录下来，用来复习巩固及其面试用，平时早上地铁公交拿出手机可以看一下。 异常类基本就那两种类型： Error Exception">
@@ -267,16 +285,6 @@
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
-            
-            站点地图
           </a>
         </li>
       
@@ -584,13 +592,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/java异常/" rel="tag"># java异常</a>
+            <a href="/tags/java异常/" rel="tag"><i class="fa fa-tag"></i> java异常</a>
           
-            <a href="/tags/异常处理/" rel="tag"># 异常处理</a>
+            <a href="/tags/异常处理/" rel="tag"><i class="fa fa-tag"></i> 异常处理</a>
           
-            <a href="/tags/异常信息/" rel="tag"># 异常信息</a>
+            <a href="/tags/异常信息/" rel="tag"><i class="fa fa-tag"></i> 异常信息</a>
           
-            <a href="/tags/java学习/" rel="tag"># java学习</a>
+            <a href="/tags/java学习/" rel="tag"><i class="fa fa-tag"></i> java学习</a>
           
         </div>
       
@@ -1021,6 +1029,10 @@
 </div>
 
 
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">全站共5.0k字</span>
+</div>
         
 <div class="busuanzi-count">
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -1195,5 +1207,7 @@
 
   
 
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
 </body>
 </html>

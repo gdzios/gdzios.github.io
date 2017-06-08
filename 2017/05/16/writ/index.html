@@ -13,6 +13,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -94,6 +101,17 @@
 
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
 
   <meta name="keywords" content="MarkdownPad,MarkdownPad注册码,文本编辑工具," />
 
@@ -106,7 +124,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/uploads/666.png?v=5.1.1" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
 
@@ -267,16 +285,6 @@
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
-            
-            站点地图
           </a>
         </li>
       
@@ -505,11 +513,11 @@ mOm4Q8CaLwwzZmF9NKV2CjlmUTqOszJv5abS5YdrPavAR6QxGjZfya3nA2ASd6HN
       
         <div class="post-tags">
           
-            <a href="/tags/MarkdownPad/" rel="tag"># MarkdownPad</a>
+            <a href="/tags/MarkdownPad/" rel="tag"><i class="fa fa-tag"></i> MarkdownPad</a>
           
-            <a href="/tags/MarkdownPad注册码/" rel="tag"># MarkdownPad注册码</a>
+            <a href="/tags/MarkdownPad注册码/" rel="tag"><i class="fa fa-tag"></i> MarkdownPad注册码</a>
           
-            <a href="/tags/文本编辑工具/" rel="tag"># 文本编辑工具</a>
+            <a href="/tags/文本编辑工具/" rel="tag"><i class="fa fa-tag"></i> 文本编辑工具</a>
           
         </div>
       
@@ -944,6 +952,10 @@ mOm4Q8CaLwwzZmF9NKV2CjlmUTqOszJv5abS5YdrPavAR6QxGjZfya3nA2ASd6HN
 </div>
 
 
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">全站共5.0k字</span>
+</div>
         
 <div class="busuanzi-count">
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -1118,5 +1130,7 @@ mOm4Q8CaLwwzZmF9NKV2CjlmUTqOszJv5abS5YdrPavAR6QxGjZfya3nA2ASd6HN
 
   
 
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
 </body>
 </html>
