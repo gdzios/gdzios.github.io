@@ -4,9 +4,9 @@
   <subtitle>既然青春留不住 不如做个大叔好</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://gdzios.github.io/"/>
+  <link href="http://gdzios.eward.win/"/>
   <updated>2017-06-05T03:51:58.157Z</updated>
-  <id>http://gdzios.github.io/</id>
+  <id>http://gdzios.eward.win/</id>
   
   <author>
     <name>大叔</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Java面试集锦：常见的java异常信息</title>
-    <link href="http://gdzios.github.io/2017/06/05/site3/"/>
-    <id>http://gdzios.github.io/2017/06/05/site3/</id>
+    <link href="http://gdzios.eward.win/2017/06/05/site3/"/>
+    <id>http://gdzios.eward.win/2017/06/05/site3/</id>
     <published>2017-06-05T01:39:28.000Z</published>
     <updated>2017-06-05T03:51:58.157Z</updated>
     
@@ -31,7 +31,7 @@
 <p>如果说Error类代表了系统和编译的错误；那 Exception类就代表了标准Java库方法所激发的异常。Error类的异常是不允许捕获的，而发生Exception异常的程序可以通过捕获处理后正常运行保持程序的可读性及可靠性。</p>
 <p>这其中 Exception类还包含运行异常类（Runtime_Exception）和非运行异常类（Non_RuntimeException）这两个直接的子类。</p>
 <p>运行异常类对应于编译错误，它是指Java程序在运行时产生的由解释器引发的各种异常。运行异常可能出现在任何地方，且出现频率很高，出现运行错误往往表示代码有错误，如：算数异常（如被0除）、下标异常（如数组越界）等。</p>
-<p>非运行异常又称为可检测异常。Java编译器利用分析方法或构造方法中可能产生的结果来检测Java程序中是否含有检测异常的处理程序，对于每个可能的可检测异常，方法或构造方法的throws子句必须列出该异常对应的类。如：java.lang java.util 、 <a href="http://gdzios.eward.win" target="_blank" rel="external">http://java.net中定义的异常都是非运行异常。</a></p>
+<p>非运行异常又称为可检测异常。Java编译器利用分析方法或构造方法中可能产生的结果来检测Java程序中是否含有检测异常的处理程序，对于每个可能的可检测异常，方法或构造方法的throws子句必须列出该异常对应的类。如：java.lang java.util 、 <a href="http://gdzios.eward.win">http://java.net中定义的异常都是非运行异常。</a></p>
 <p>我整理了一下，常见的Java Exception异常</p>
 <ol>
 <li><p>java.lang.ArithmeticException：算术条件异常。譬如：整数除零等。 </p>
@@ -182,20 +182,20 @@
     </summary>
     
     
-      <category term="java异常" scheme="http://gdzios.github.io/tags/java%E5%BC%82%E5%B8%B8/"/>
+      <category term="java异常" scheme="http://gdzios.eward.win/tags/java%E5%BC%82%E5%B8%B8/"/>
     
-      <category term="异常处理" scheme="http://gdzios.github.io/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
+      <category term="异常处理" scheme="http://gdzios.eward.win/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
     
-      <category term="异常信息" scheme="http://gdzios.github.io/tags/%E5%BC%82%E5%B8%B8%E4%BF%A1%E6%81%AF/"/>
+      <category term="异常信息" scheme="http://gdzios.eward.win/tags/%E5%BC%82%E5%B8%B8%E4%BF%A1%E6%81%AF/"/>
     
-      <category term="java学习" scheme="http://gdzios.github.io/tags/java%E5%AD%A6%E4%B9%A0/"/>
+      <category term="java学习" scheme="http://gdzios.eward.win/tags/java%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>为Hexo添加文章置顶功能</title>
-    <link href="http://gdzios.github.io/2017/06/02/site2/"/>
-    <id>http://gdzios.github.io/2017/06/02/site2/</id>
+    <link href="http://gdzios.eward.win/2017/06/02/site2/"/>
+    <id>http://gdzios.eward.win/2017/06/02/site2/</id>
     <published>2017-06-02T05:21:30.000Z</published>
     <updated>2017-06-05T03:55:24.743Z</updated>
     
@@ -286,16 +286,16 @@ date: 201-06-01 11:44:40
     </summary>
     
     
-      <category term="博客" scheme="http://gdzios.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="http://gdzios.eward.win/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="文章置顶" scheme="http://gdzios.github.io/tags/%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/"/>
+      <category term="文章置顶" scheme="http://gdzios.eward.win/tags/%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/"/>
     
   </entry>
   
   <entry>
     <title>MarkdownPad免费激活注册</title>
-    <link href="http://gdzios.github.io/2017/05/16/writ/"/>
-    <id>http://gdzios.github.io/2017/05/16/writ/</id>
+    <link href="http://gdzios.eward.win/2017/05/16/writ/"/>
+    <id>http://gdzios.eward.win/2017/05/16/writ/</id>
     <published>2017-05-16T11:01:37.000Z</published>
     <updated>2017-06-05T03:53:13.631Z</updated>
     
@@ -354,21 +354,21 @@ mOm4Q8CaLwwzZmF9NKV2CjlmUTqOszJv5abS5YdrPavAR6QxGjZfya3nA2ASd6HN
     
     </summary>
     
-      <category term="工具" scheme="http://gdzios.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://gdzios.eward.win/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="MarkdownPad" scheme="http://gdzios.github.io/tags/MarkdownPad/"/>
+      <category term="MarkdownPad" scheme="http://gdzios.eward.win/tags/MarkdownPad/"/>
     
-      <category term="MarkdownPad注册码" scheme="http://gdzios.github.io/tags/MarkdownPad%E6%B3%A8%E5%86%8C%E7%A0%81/"/>
+      <category term="MarkdownPad注册码" scheme="http://gdzios.eward.win/tags/MarkdownPad%E6%B3%A8%E5%86%8C%E7%A0%81/"/>
     
-      <category term="文本编辑工具" scheme="http://gdzios.github.io/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%B7%A5%E5%85%B7/"/>
+      <category term="文本编辑工具" scheme="http://gdzios.eward.win/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>微信小程序开发之转发功能</title>
-    <link href="http://gdzios.github.io/2017/05/16/site/"/>
-    <id>http://gdzios.github.io/2017/05/16/site/</id>
+    <link href="http://gdzios.eward.win/2017/05/16/site/"/>
+    <id>http://gdzios.eward.win/2017/05/16/site/</id>
     <published>2017-05-16T10:28:08.000Z</published>
     <updated>2017-06-05T03:54:04.512Z</updated>
     
@@ -392,14 +392,14 @@ withShareTicket: true
     
     </summary>
     
-      <category term="微信小程序" scheme="http://gdzios.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="微信小程序" scheme="http://gdzios.eward.win/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     
-      <category term="微信小程序" scheme="http://gdzios.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="微信小程序" scheme="http://gdzios.eward.win/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
-      <category term="转发功能" scheme="http://gdzios.github.io/tags/%E8%BD%AC%E5%8F%91%E5%8A%9F%E8%83%BD/"/>
+      <category term="转发功能" scheme="http://gdzios.eward.win/tags/%E8%BD%AC%E5%8F%91%E5%8A%9F%E8%83%BD/"/>
     
-      <category term="小程序开发" scheme="http://gdzios.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/"/>
+      <category term="小程序开发" scheme="http://gdzios.eward.win/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
