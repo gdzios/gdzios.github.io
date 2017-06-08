@@ -4,29 +4,8 @@
 
     
   <url>
-    <loc>http://gdzios.eward.win/2017/06/08/site4/</loc>
-    <lastmod>2017-06-08T07:48:03.988Z</lastmod>
-    <data>
-        <display>
-        <title>Script正则表达式</title>
-        <pubTime>2017-06-08T06:29:45.000Z</pubTime>
-        
-        <tag>Script</tag>
-         
-        <tag>正则表达式</tag>
-         
-        <tag>js</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://gdzios.eward.win/2017/06/05/site3/</loc>
-    <lastmod>2017-06-08T02:06:47.171Z</lastmod>
+    <lastmod>2017-06-08T08:11:05.949Z</lastmod>
     <data>
         <display>
         <title>Java面试集锦：常见的java异常信息</title>
@@ -40,8 +19,16 @@
          
         <tag>java学习</tag>
          
+        <tag>java面试</tag>
+         
          
            
+             
+              <breadCrumb title="java" url="http://gdzios.eward.win/categories/java/"/>
+          
+             
+              <breadCrumb title="java异常" url="http://gdzios.eward.win/categories/java/java%E5%BC%82%E5%B8%B8/"/>
+          
         </display>
     </data>
     </url>
@@ -49,7 +36,7 @@
     
   <url>
     <loc>http://gdzios.eward.win/2017/06/02/site2/</loc>
-    <lastmod>2017-06-08T01:23:57.081Z</lastmod>
+    <lastmod>2017-06-08T08:10:55.381Z</lastmod>
     <data>
         <display>
         <title>为Hexo添加文章置顶功能</title>
@@ -61,6 +48,36 @@
          
          
            
+             
+              <breadCrumb title="hexo" url="http://gdzios.eward.win/categories/hexo/"/>
+          
+             
+              <breadCrumb title="文章置顶" url="http://gdzios.eward.win/categories/hexo/%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://gdzios.eward.win/2017/06/08/site4/</loc>
+    <lastmod>2017-06-08T08:10:31.217Z</lastmod>
+    <data>
+        <display>
+        <title>JavaScript正则表达式</title>
+        <pubTime>2017-06-08T06:29:45.000Z</pubTime>
+        
+        <tag>Script</tag>
+         
+        <tag>正则表达式</tag>
+         
+        <tag>js</tag>
+         
+         
+           
+             
+              <breadCrumb title="web前端" url="http://gdzios.eward.win/categories/web%E5%89%8D%E7%AB%AF/"/>
+          
         </display>
     </data>
     </url>

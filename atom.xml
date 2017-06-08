@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gdzios.eward.win/"/>
-  <updated>2017-06-08T07:48:03.988Z</updated>
+  <updated>2017-06-08T08:10:31.217Z</updated>
   <id>http://gdzios.eward.win/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Script正则表达式</title>
+    <title>JavaScript正则表达式</title>
     <link href="http://gdzios.eward.win/2017/06/08/site4/"/>
     <id>http://gdzios.eward.win/2017/06/08/site4/</id>
     <published>2017-06-08T06:29:45.000Z</published>
-    <updated>2017-06-08T07:48:03.988Z</updated>
+    <updated>2017-06-08T08:10:31.217Z</updated>
     
     <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>正则表达式，又称为规则表达式，（<code>Regular Expression</code>）简写：<code>RE</code>,<code>regex</code>或<code>regxp</code>,计算机科学的一个概念。用来检索，替换那些符合某个模式（规则）的文本。</p>
 <h1 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h1><ol>
@@ -77,6 +77,8 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
     
     </summary>
     
+      <category term="web前端" scheme="http://gdzios.eward.win/categories/web%E5%89%8D%E7%AB%AF/"/>
+    
     
       <category term="Script" scheme="http://gdzios.eward.win/tags/Script/"/>
     
@@ -91,7 +93,7 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
     <link href="http://gdzios.eward.win/2017/06/05/site3/"/>
     <id>http://gdzios.eward.win/2017/06/05/site3/</id>
     <published>2017-06-05T01:39:28.000Z</published>
-    <updated>2017-06-08T02:06:47.171Z</updated>
+    <updated>2017-06-08T08:11:05.949Z</updated>
     
     <content type="html"><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>這篇文章主要介绍了java平时常见的一些异常报错信息，我以文档的形式记录下来，用来复习巩固及其面试用，平时早上地铁公交拿出手机可以看一下。</p>
 <h1 id="异常类基本就那两种类型："><a href="#异常类基本就那两种类型：" class="headerlink" title="异常类基本就那两种类型："></a>异常类基本就那两种类型：</h1><ol>
@@ -252,6 +254,10 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
     
     </summary>
     
+      <category term="java" scheme="http://gdzios.eward.win/categories/java/"/>
+    
+      <category term="java异常" scheme="http://gdzios.eward.win/categories/java/java%E5%BC%82%E5%B8%B8/"/>
+    
     
       <category term="java异常" scheme="http://gdzios.eward.win/tags/java%E5%BC%82%E5%B8%B8/"/>
     
@@ -261,6 +267,8 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
     
       <category term="java学习" scheme="http://gdzios.eward.win/tags/java%E5%AD%A6%E4%B9%A0/"/>
     
+      <category term="java面试" scheme="http://gdzios.eward.win/tags/java%E9%9D%A2%E8%AF%95/"/>
+    
   </entry>
   
   <entry>
@@ -268,7 +276,7 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
     <link href="http://gdzios.eward.win/2017/06/02/site2/"/>
     <id>http://gdzios.eward.win/2017/06/02/site2/</id>
     <published>2017-06-02T05:21:30.000Z</published>
-    <updated>2017-06-08T01:23:57.081Z</updated>
+    <updated>2017-06-08T08:10:55.381Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦）<br>其实就是增加一个<code>top</code>值，在<code>hexo</code>生成<code>html</code>时，将<code>top</code>值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。</p>
 <a id="more"></a>
@@ -358,6 +366,10 @@ date: 201-06-01 11:44:40
       &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦）&lt;br&gt;其实就是增加一个&lt;code&gt;top&lt;/code&gt;值，在&lt;code&gt;hexo&lt;/code&gt;生成&lt;code&gt;html&lt;/code&gt;时，将&lt;code&gt;top&lt;/code&gt;值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。&lt;/p&gt;
     
     </summary>
+    
+      <category term="hexo" scheme="http://gdzios.eward.win/categories/hexo/"/>
+    
+      <category term="文章置顶" scheme="http://gdzios.eward.win/categories/hexo/%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/"/>
     
     
       <category term="博客" scheme="http://gdzios.eward.win/tags/%E5%8D%9A%E5%AE%A2/"/>
