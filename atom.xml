@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gdzios.eward.win/"/>
-  <updated>2017-06-08T02:06:47.171Z</updated>
+  <updated>2017-06-08T07:48:03.988Z</updated>
   <id>http://gdzios.eward.win/</id>
   
   <author>
@@ -14,6 +14,77 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Script正则表达式</title>
+    <link href="http://gdzios.eward.win/2017/06/08/site4/"/>
+    <id>http://gdzios.eward.win/2017/06/08/site4/</id>
+    <published>2017-06-08T06:29:45.000Z</published>
+    <updated>2017-06-08T07:48:03.988Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>正则表达式，又称为规则表达式，（<code>Regular Expression</code>）简写：<code>RE</code>,<code>regex</code>或<code>regxp</code>,计算机科学的一个概念。用来检索，替换那些符合某个模式（规则）的文本。</p>
+<h1 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h1><ol>
+<li>灵活性，逻辑性和功能性非常的强；</li>
+<li>可以迅速地采用极简单的方式达到字符串的复杂控制。</li>
+<li>对于刚接触的人来说，比较晦涩难懂。</li>
+</ol>
+<a id="more"></a>
+<h1 id="匹配原理"><a href="#匹配原理" class="headerlink" title="匹配原理"></a>匹配原理</h1><p>现在有字符串”<code>abcde</code>“,用正则表达式<code>/bcd/</code>进行匹配。首先是表达式<code>b</code>字符在字符串中查找第二个字符b匹配上了，然后用表达式c字符在字符串的<code>b</code>字符之后查找，如果是<code>c</code>字符则匹配成功，再次使用表达式<code>d</code>字符在字符串的<code>c</code>字符之后查找。如果表达式<code>c</code>字符在字符串的<code>b</code>字符之后没能匹配到<code>c</code>字符，则匹配失败，将再次用表达式<code>b</code>字符开始从字符串的<code>b</code>字符之后开始查找。<br>  当表达式没有说明是全局查找时，表达式找到第一个匹配成功的字符串后就返回。当要做全局查找时，将可能返回一个结果数组。</p>
+<h1 id="常用于表单验证"><a href="#常用于表单验证" class="headerlink" title="常用于表单验证"></a>常用于表单验证</h1><ol>
+<li>减轻服务器的压力</li>
+<li>保证输入的数据符合要求</li>
+<li>代码简洁，严谨验证文本框内容</li>
+</ol>
+<h1 id="JavaScript正则表达式符号"><a href="#JavaScript正则表达式符号" class="headerlink" title="JavaScript正则表达式符号 #"></a>JavaScript正则表达式符号 #<img src="http://i.imgur.com/LdzbtIF.png" alt="JavaScript"><img src="http://i.imgur.com/k7TXdl9.png" alt="JavaScript"></h1><h1 id="常用JavaScript正则表达式"><a href="#常用JavaScript正则表达式" class="headerlink" title="常用JavaScript正则表达式"></a>常用JavaScript正则表达式</h1><ul>
+<li>匹配数字：/\d+/</li>
+<li>匹配子字符串：/abc/</li>
+<li>匹配IP地址:：/(\d{1,3}.){3}\d{1,3}/</li>
+<li>匹配邮箱：/\w+@.+.\w+/</li>
+<li>匹配身份证号码：/dddddd yyyymmdd xxx y/<br>g<h1 id="JavaScript的RegExp对象"><a href="#JavaScript的RegExp对象" class="headerlink" title="JavaScript的RegExp对象"></a>JavaScript的RegExp对象</h1>RegExp对象的构造函数第一个参数为正则表达式的文本内容，第二个参数则为可选项标志，标志可以组合使用。</li>
+<li>g(全文查找)</li>
+<li>i(忽略大小写)</li>
+<li>m(多行查找)</li>
+</ul>
+<p>普通方式</p>
+<pre><code>var reg = /表达式/附加参数
+</code></pre><p>构造函数</p>
+<pre><code>var reg = new RegExp(&quot;表达式&quot;,&quot;附加参数&quot;)
+</code></pre><h2 id="示例1："><a href="#示例1：" class="headerlink" title="示例1："></a>示例1：</h2><pre><code>var re1 = new RegExp(&quot;a&quot;,&quot;g&quot;);//匹配所有的a
+var re2 = new RegExp(&quot;a&quot;,&quot;gi&quot;);//匹配所有的a或A
+</code></pre><p>正则表达式还有另外一种正则表达式字面量的声明方式</p>
+<h2 id="示例2："><a href="#示例2：" class="headerlink" title="示例2："></a>示例2：</h2><pre><code>var re1 = /a/;//匹配a
+var re2 = /a/gi;//匹配所有的a或A
+</code></pre><h1 id="RegExp对象的方法与属性"><a href="#RegExp对象的方法与属性" class="headerlink" title="RegExp对象的方法与属性"></a>RegExp对象的方法与属性</h1><h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>test()<br>exec()<br>compile()</p>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><p>source<br>lastindex<br>$1…$9<br>input($_)<br>lastMatch($&amp;)<br>lastParen($+)<br>leftContext($’)<br>rightContext($’)</p>
+<h1 id="正则表达式支持JavaScript字符串对象"><a href="#正则表达式支持JavaScript字符串对象" class="headerlink" title="正则表达式支持JavaScript字符串对象"></a>正则表达式支持JavaScript字符串对象</h1><h2 id="String的search方法"><a href="#String的search方法" class="headerlink" title="String的search方法"></a>String的search方法</h2><pre><code>var str = &quot;hello world,hello world&quot;;
+alert(str.search(&quot;world&quot;));//输出6
+alert(str.search(/world/));//输出6
+</code></pre><p>ps：引号包围的是字符串，斜杠包围的是正则表达式。</p>
+<h2 id="String的match-方法"><a href="#String的match-方法" class="headerlink" title="String的match()方法"></a>String的match()方法</h2><pre><code>var str2 = &quot;1 plus 2 equal 3 1&quot;
+alert(atr2.match(/\d+/g));//输出1，2，3，1
+</code></pre><h2 id="String的Replase-方法"><a href="#String的Replase-方法" class="headerlink" title="String的Replase()方法"></a>String的Replase()方法</h2><p>语法:<code>stringObject.replace(regexp/substr,replacement);</code></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>想好了再写</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;p&gt;正则表达式，又称为规则表达式，（&lt;code&gt;Regular Expression&lt;/code&gt;）简写：&lt;code&gt;RE&lt;/code&gt;,&lt;code&gt;regex&lt;/code&gt;或&lt;code&gt;regxp&lt;/code&gt;,计算机科学的一个概念。用来检索，替换那些符合某个模式（规则）的文本。&lt;/p&gt;
+&lt;h1 id=&quot;特点&quot;&gt;&lt;a href=&quot;#特点&quot; class=&quot;headerlink&quot; title=&quot;特点&quot;&gt;&lt;/a&gt;特点&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;灵活性，逻辑性和功能性非常的强；&lt;/li&gt;
+&lt;li&gt;可以迅速地采用极简单的方式达到字符串的复杂控制。&lt;/li&gt;
+&lt;li&gt;对于刚接触的人来说，比较晦涩难懂。&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Script" scheme="http://gdzios.eward.win/tags/Script/"/>
+    
+      <category term="正则表达式" scheme="http://gdzios.eward.win/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+      <category term="js" scheme="http://gdzios.eward.win/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>Java面试集锦：常见的java异常信息</title>
