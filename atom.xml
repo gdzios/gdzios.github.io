@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gdzios.eward.win/"/>
-  <updated>2017-06-09T01:20:52.096Z</updated>
+  <updated>2017-06-14T08:53:01.527Z</updated>
   <id>http://gdzios.eward.win/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://gdzios.eward.win/2017/06/08/site5/"/>
     <id>http://gdzios.eward.win/2017/06/08/site5/</id>
     <published>2017-06-08T08:24:15.000Z</published>
-    <updated>2017-06-09T01:20:52.096Z</updated>
+    <updated>2017-06-14T08:53:01.527Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
 <p>看到有些next主题的网站很炫酷，那么是怎么配置的呢？接下来我会讲一讲如何实现一些炫酷的效果</p>
@@ -270,7 +270,7 @@ color: #0593d3;
     enabled: true
 </code></pre><p>完成以上设置之后，在每篇文章之后都会添加如上效果图的样子。</p>
 <h1 id="修改作者头像并旋转"><a href="#修改作者头像并旋转" class="headerlink" title="修改作者头像并旋转"></a>修改作者头像并旋转</h1><p>实现效果图</p>
-<p>直接看我的<a href="http://gdzios.eward.win">博客</a>吧，鼠标移动到头像</p>
+<p>直接看我的<a href="http://javaweb.win" target="_blank" rel="external">博客</a>吧，鼠标移动到头像</p>
 <p>具体实现方法</p>
 <p>打开<code>\themes\next\source\css\_common\components\sidebar\sidebar-author.styl</code>，在里面添加如下代码：</p>
 <pre><code>.site-author-image {
@@ -443,7 +443,7 @@ post_wordcount:
   wordcount: true
   min2read: true
 </code></pre><h1 id="添加顶部加载条"><a href="#添加顶部加载条" class="headerlink" title="添加顶部加载条"></a>添加顶部加载条</h1><p>实现效果图</p>
-<p>具体看我博客加载效果：<a href="http://gdzios.eward.win/">一碗汤不热</a></p>
+<p>具体看我博客加载效果：<a href="gdzios.github.io">一碗汤不热</a></p>
 <p>具体实现方法</p>
 <p>现在使用的最新版的<code>next</code>主题，只需修改主题配置文件<code>(_config.yml)</code>将<code>pace: false</code>改为<code>pace: true</code>就行了，你还可以换不同样式的加载条，如下图：</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/5308475-6d44a78e76dbf950.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
@@ -454,7 +454,7 @@ post_wordcount:
 <h1 id="修改网页底部的桃心"><a href="#修改网页底部的桃心" class="headerlink" title="修改网页底部的桃心"></a>修改网页底部的桃心</h1><p>还是打开<code>themes/next/layout/_partials/footer.swig</code>，找到：<br>，然后还是在<a href="http://fontawesome.io/icons/" target="_blank" rel="external">图标库</a>中找到你自己喜欢的图标，然后修改画红线的部分就可以了。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/5308475-f6355823aef7f723.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <h1 id="文章加密访问"><a href="#文章加密访问" class="headerlink" title="文章加密访问"></a>文章加密访问</h1><p>实现效果图</p>
-<p>看我這篇文章，传送门—-&gt;<a href="http://gdzios.eward.win/2017/06/05/site3/">一碗汤不热</a></p>
+<p>看我這篇文章，传送门—-&gt;<a href="http://javaweb.win/2017/06/05/site3/" target="_blank" rel="external">一碗汤不热</a></p>
 <p>具体实现方法</p>
 <p>打开<code>themes-&gt;next-&gt;layout-&gt;_partials-&gt;head.swig</code>文件,在<head>标签内插入这样一段代码：</head></p>
 <pre><code>&lt;script&gt;
