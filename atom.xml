@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gdzios.eward.win/"/>
-  <updated>2017-06-14T08:53:01.527Z</updated>
+  <updated>2017-06-23T03:42:33.192Z</updated>
   <id>http://gdzios.eward.win/</id>
   
   <author>
@@ -14,6 +14,160 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JSP Standard Tag Library</title>
+    <link href="http://gdzios.eward.win/2017/06/23/site7/"/>
+    <id>http://gdzios.eward.win/2017/06/23/site7/</id>
+    <published>2017-06-23T02:32:29.000Z</published>
+    <updated>2017-06-23T03:42:33.192Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Jstl介绍"><a href="#Jstl介绍" class="headerlink" title="Jstl介绍"></a>Jstl介绍</h1><h2 id="什么是Jstl？"><a href="#什么是Jstl？" class="headerlink" title="什么是Jstl？"></a>什么是Jstl？</h2><p>Jstl全称：Java Servlet Standard Tag Library,即JSP标准标签库，它包含了我们在开发jsp页面时经常用到的一组标准标签库，这些标签为我们提供了一种不用嵌入java代码，就可以开发复杂的jsp页面的途径。</p>
+<p> Jstl通常会与EL表达式合作实现JSP页面的编号。</p>
+<h2 id="Jstl环境搭建"><a href="#Jstl环境搭建" class="headerlink" title="Jstl环境搭建"></a>Jstl环境搭建</h2><ol>
+<li>导入jar包</li>
+</ol>
+<p>2.引用核心标签库<br> <code>&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot;%&gt;</code></p>
+<p>一般情况下，用MyEclipse都会默认导入jar包的，手动<a href="http://archive.apache.org/dist/jakarta/taglibs/standard/bnaries" target="_blank" rel="external">下载地址</a></p>
+<h1 id="Jstl标准标签库"><a href="#Jstl标准标签库" class="headerlink" title="Jstl标准标签库"></a>Jstl标准标签库</h1><p>核心标签库</p>
+<h2 id="按照功能的不同又分为："><a href="#按照功能的不同又分为：" class="headerlink" title="按照功能的不同又分为："></a>按照功能的不同又分为：</h2><ol>
+<li>通用标签库：<code>set</code> <code>out</code> <code>remove</code></li>
+<li>条件标签库：<code>if</code> <code>choose</code></li>
+<li>迭代标签库：<code>forEach</code></li>
+</ol>
+<h2 id="通用标签库："><a href="#通用标签库：" class="headerlink" title="通用标签库："></a>通用标签库：</h2><p>用于在jsp页面内设置，删除和显示变量，</p>
+<h3 id="set：设置置顶范围的变量值，其语法格式分为两种："><a href="#set：设置置顶范围的变量值，其语法格式分为两种：" class="headerlink" title="set：设置置顶范围的变量值，其语法格式分为两种："></a>set：设置置顶范围的变量值，其语法格式分为两种：</h3><p>将value值存储到范围为scope的变量variable中</p>
+<pre><code>&lt;c:set var=&quot;variable&quot; value=&quot;&quot; scope=&quot;scope&quot;/&gt;
+</code></pre><p>将value值存储到target对象的属性中</p>
+<pre><code>&lt;s:set target=&quot;target&quot; property=&quot;property&quot; value=&quot;&quot;/&gt;
+</code></pre><h3 id="out-计算表达式并将结果输出显示："><a href="#out-计算表达式并将结果输出显示：" class="headerlink" title="out:计算表达式并将结果输出显示："></a>out:计算表达式并将结果输出显示：</h3><p>不指定默认值</p>
+<c:out value="">
+
+<p>指定默认值</p>
+<c:out value="" default="default">
+
+<p>remove: 删除指定范围内的变量</p>
+<pre><code>&lt;c:remove var=&quot;value&quot; scope=&quot;scope&quot;/&gt;
+</code></pre><h2 id="条件标签库"><a href="#条件标签库" class="headerlink" title="条件标签库"></a>条件标签库</h2><p>if ：功能和java语言中的完全相同，</p>
+<c:if test="condition" var="varName" scope="scope">
+
+<p>test指条件 后面通常不写的：var存储判断后的结果， scope指定范围。</p>
+<p>choose：实现java语言中 if—else if—else</p>
+<pre><code>&lt;c:choose var = &quot;varName&quot; scope=&quot;scope&quot;&gt;
+    &lt;c:when test=&quot;condition&quot;&gt;
+        主体内容
+    &lt;/c:when&gt;
+        &lt;c:other wise&gt;
+        主体内容
+        &lt;/c:otherwise&gt;
+&lt;/c:choose&gt;
+</code></pre><h2 id="迭代标签库"><a href="#迭代标签库" class="headerlink" title="迭代标签库"></a>迭代标签库</h2><p>两种语法：遍历集合，语句循环执行指定次数</p>
+<h3 id="遍历集合对象的成员"><a href="#遍历集合对象的成员" class="headerlink" title="遍历集合对象的成员"></a>遍历集合对象的成员</h3><pre><code>&lt;c:forEach var =&quot;varName&quot; items=&quot;collectionName&quot;
+    varStatus=&quot;varStatusName&quot; begin=&quot;beginIndex&quot;
+    end=&quot;endIndex&quot; step=&quot;step&quot;&gt;
+&lt;/c:forEach&gt;
+</code></pre><h3 id="指定语句的执行次数"><a href="#指定语句的执行次数" class="headerlink" title="指定语句的执行次数"></a>指定语句的执行次数</h3><pre><code>&lt;c:forEach var =&quot;varName&quot; varStatus=&quot;varStatusName&quot;
+    begin =&quot;beginIndex&quot; end = &quot;endIndex&quot; step=&quot;step&quot;
+&lt;/c:forEach&gt;
+</code></pre></c:if></c:out></c:out>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Jstl介绍&quot;&gt;&lt;a href=&quot;#Jstl介绍&quot; class=&quot;headerlink&quot; title=&quot;Jstl介绍&quot;&gt;&lt;/a&gt;Jstl介绍&lt;/h1&gt;&lt;h2 id=&quot;什么是Jstl？&quot;&gt;&lt;a href=&quot;#什么是Jstl？&quot; class=&quot;headerlink&quot; 
+    
+    </summary>
+    
+      <category term="web前端" scheme="http://gdzios.eward.win/categories/web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="JSP" scheme="http://gdzios.eward.win/tags/JSP/"/>
+    
+      <category term="JSP标签" scheme="http://gdzios.eward.win/tags/JSP%E6%A0%87%E7%AD%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>EL表达式</title>
+    <link href="http://gdzios.eward.win/2017/06/19/site6/"/>
+    <id>http://gdzios.eward.win/2017/06/19/site6/</id>
+    <published>2017-06-19T05:43:13.000Z</published>
+    <updated>2017-06-23T02:31:26.644Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="EL语法结构"><a href="#EL语法结构" class="headerlink" title="EL语法结构"></a>EL语法结构</h1><pre><code>${EL表达式}
+</code></pre><h1 id="使用变量名获取值："><a href="#使用变量名获取值：" class="headerlink" title="使用变量名获取值："></a>使用变量名获取值：</h1><pre><code>${变量名}
+page---${pageScope.usename},找不到返回 null
+request---${requestScope.usename},找不到返回 null
+session---${sessionScope.usename},找不到返回 null
+application---${applicationScope.usename},找不到返回 null
+</code></pre><p>不指定范围也可以，他会自动依次在四大作用域去寻找，没有返回null；效率低，容易受同名变量干扰。</p>
+<h1 id="获取对象属性："><a href="#获取对象属性：" class="headerlink" title="获取对象属性："></a>获取对象属性：</h1><h2 id="点操作符"><a href="#点操作符" class="headerlink" title="点操作符"></a>点操作符</h2><pre><code>${user.username}
+</code></pre><h2 id="操作符"><a href="#操作符" class="headerlink" title="[ ]操作符"></a>[ ]操作符</h2><pre><code>${user[&quot;username&quot;]}
+</code></pre><h2 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h2><ol>
+<li>当属性名中包含特殊字符，例如·或-等情况下，不用点操作符来访问，這时只能用[ ]操作符；</li>
+<li>访问数组，链表等</li>
+</ol>
+<h1 id="获取集合："><a href="#获取集合：" class="headerlink" title="获取集合："></a>获取集合：</h1><pre><code>&lt;body&gt;
+
+&lt;% List names = new ArrayList();
+
+ names.add(0, &quot;tom&quot;);
+
+ names.add(1, &quot;lusi&quot;);
+
+ request.setAttribute(&quot;names&quot;, names);
+ %&gt; 
+
+姓名： ${names[0] }&lt;br&gt;
+
+姓名： ${names[1] } 
+
+&lt;% Map name = new HashMap();
+
+ name.put(&quot;one&quot;, &quot;wangba&quot;);
+
+ name.put(&quot;two&quot;, &quot;huahua&quot;);
+
+ request.setAttribute(&quot;name&quot;, name); %&gt;
+ &lt;br&gt;
+
+姓名： ${name.one }&lt;br&gt;
+
+姓名： ${name[&quot;two&quot;] } 
+
+&lt;/body&gt;
+</code></pre><h1 id="关系操作符"><a href="#关系操作符" class="headerlink" title="关系操作符"></a>关系操作符</h1><p>EL表达式支持大部分Java所提供的算术和逻辑操作符：</p>
+<pre><code>== eq         ${8==5}  ${8eq5} ---&gt; false
+!= ne         ${8!=5}  ${8eq5} ---&gt; true
+ &lt; lt         ${8&lt;5}   ${8eq5} ---&gt; false
+ &gt; gt          ${8&gt;5}   ${8eq5} ---&gt; true
+&lt;= le
+&gt;= ge
+/ or div  除
+% or mod  取模
+&amp;&amp; or and    测试逻辑与
+|| or or    测试逻辑或
+!  or not    测试取反
+empty        测试是否为空
+</code></pre><h1 id="EL隐式对象："><a href="#EL隐式对象：" class="headerlink" title="EL隐式对象："></a>EL隐式对象：</h1><p>作用域访问对象：</p>
+<pre><code>pageScope
+requestScope
+sessionScope
+applicationScope
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;EL语法结构&quot;&gt;&lt;a href=&quot;#EL语法结构&quot; class=&quot;headerlink&quot; title=&quot;EL语法结构&quot;&gt;&lt;/a&gt;EL语法结构&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;${EL表达式}
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&quot;使用变量名获取值：&quot;&gt;&lt;a hr
+    
+    </summary>
+    
+      <category term="web前端" scheme="http://gdzios.eward.win/categories/web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="EL表达式" scheme="http://gdzios.eward.win/tags/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>基于Next主题美化教程(关注微信gdz_hz获取密钥)</title>
@@ -637,7 +791,7 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
     <link href="http://gdzios.eward.win/2017/06/05/site3/"/>
     <id>http://gdzios.eward.win/2017/06/05/site3/</id>
     <published>2017-06-05T01:39:28.000Z</published>
-    <updated>2017-06-08T08:11:05.949Z</updated>
+    <updated>2017-06-23T03:01:22.780Z</updated>
     
     <content type="html"><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>這篇文章主要介绍了java平时常见的一些异常报错信息，我以文档的形式记录下来，用来复习巩固及其面试用，平时早上地铁公交拿出手机可以看一下。</p>
 <h1 id="异常类基本就那两种类型："><a href="#异常类基本就那两种类型：" class="headerlink" title="异常类基本就那两种类型："></a>异常类基本就那两种类型：</h1><ol>
@@ -785,7 +939,7 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
 <p>4.如果插入数据时出现 “argument type mismatch”错误,可能是你使用了Date等特殊对象,因为struts不能自动从String型转换成Date型,所以,你需要在Action中手动把String型转换成Date型.</p>
 <p>5.Hibernate中, Query的iterator比list方法快很多.</p>
 <p>6.如果出现 “equal symbol expected”错误,说明你的strtus标签中包含另一个标签或者变量,例如: <html:select property="test" mock="<%=test%>"> 或者 <html:hidden property="test" value="<bean:write name=" t"="">"/> 这样的情况…</html:hidden></html:select></p>
-<p>最后希望我整理的这些东西能给大家带来一点点帮助</p>
+<p>留着抱佛脚用</p>
 ]]></content>
     
     <summary type="html">
