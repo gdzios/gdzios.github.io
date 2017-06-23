@@ -10,5 +10,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://gdzios.eward.win/sitemap.xml
-Sitemap: http://gdzios.eward.win/baidusitemap.xml
+Sitemap: http://javaweb.win/sitemap.xml
+Sitemap: http://javaweb.win/baidusitemap.xml

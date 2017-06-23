@@ -4,9 +4,9 @@
   <subtitle>既然青春留不住 不如做个大叔好</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://gdzios.eward.win/"/>
+  <link href="http://javaweb.win/"/>
   <updated>2017-06-23T05:40:20.477Z</updated>
-  <id>http://gdzios.eward.win/</id>
+  <id>http://javaweb.win/</id>
   
   <author>
     <name>CH</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>JSP Standard Tag Library</title>
-    <link href="http://gdzios.eward.win/2017/06/23/site7/"/>
-    <id>http://gdzios.eward.win/2017/06/23/site7/</id>
+    <link href="http://javaweb.win/2017/06/23/site7/"/>
+    <id>http://javaweb.win/2017/06/23/site7/</id>
     <published>2017-06-23T02:32:29.000Z</published>
     <updated>2017-06-23T05:40:20.477Z</updated>
     
@@ -76,19 +76,19 @@
     
     </summary>
     
-      <category term="web前端" scheme="http://gdzios.eward.win/categories/web%E5%89%8D%E7%AB%AF/"/>
+      <category term="web前端" scheme="http://javaweb.win/categories/web%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="JSP" scheme="http://gdzios.eward.win/tags/JSP/"/>
+      <category term="JSP" scheme="http://javaweb.win/tags/JSP/"/>
     
-      <category term="JSP标签" scheme="http://gdzios.eward.win/tags/JSP%E6%A0%87%E7%AD%BE/"/>
+      <category term="JSP标签" scheme="http://javaweb.win/tags/JSP%E6%A0%87%E7%AD%BE/"/>
     
   </entry>
   
   <entry>
     <title>EL表达式</title>
-    <link href="http://gdzios.eward.win/2017/06/19/site6/"/>
-    <id>http://gdzios.eward.win/2017/06/19/site6/</id>
+    <link href="http://javaweb.win/2017/06/19/site6/"/>
+    <id>http://javaweb.win/2017/06/19/site6/</id>
     <published>2017-06-19T05:43:13.000Z</published>
     <updated>2017-06-23T05:38:07.391Z</updated>
     
@@ -167,17 +167,17 @@ applicationScope
     
     </summary>
     
-      <category term="web前端" scheme="http://gdzios.eward.win/categories/web%E5%89%8D%E7%AB%AF/"/>
+      <category term="web前端" scheme="http://javaweb.win/categories/web%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="EL表达式" scheme="http://gdzios.eward.win/tags/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+      <category term="EL表达式" scheme="http://javaweb.win/tags/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>基于Next主题美化教程(关注微信gdz_hz获取密钥)</title>
-    <link href="http://gdzios.eward.win/2017/06/08/site5/"/>
-    <id>http://gdzios.eward.win/2017/06/08/site5/</id>
+    <link href="http://javaweb.win/2017/06/08/site5/"/>
+    <id>http://javaweb.win/2017/06/08/site5/</id>
     <published>2017-06-08T08:24:15.000Z</published>
     <updated>2017-06-23T05:28:15.998Z</updated>
     
@@ -429,7 +429,7 @@ color: #0593d3;
     enabled: true
 </code></pre><p>完成以上设置之后，在每篇文章之后都会添加如上效果图的样子。</p>
 <h1 id="修改作者头像并旋转"><a href="#修改作者头像并旋转" class="headerlink" title="修改作者头像并旋转"></a>修改作者头像并旋转</h1><p>实现效果图</p>
-<p>直接看我的<a href="http://javaweb.win" target="_blank" rel="external">博客</a>吧，鼠标移动到头像</p>
+<p>直接看我的<a href="http://javaweb.win">博客</a>吧，鼠标移动到头像</p>
 <p>具体实现方法</p>
 <p>打开<code>\themes\next\source\css\_common\components\sidebar\sidebar-author.styl</code>，在里面添加如下代码：</p>
 <pre><code>.site-author-image {
@@ -613,7 +613,7 @@ post_wordcount:
 <h1 id="修改网页底部的桃心"><a href="#修改网页底部的桃心" class="headerlink" title="修改网页底部的桃心"></a>修改网页底部的桃心</h1><p>还是打开<code>themes/next/layout/_partials/footer.swig</code>，找到：<br>，然后还是在<a href="http://fontawesome.io/icons/" target="_blank" rel="external">图标库</a>中找到你自己喜欢的图标，然后修改画红线的部分就可以了。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/5308475-f6355823aef7f723.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <h1 id="文章加密访问"><a href="#文章加密访问" class="headerlink" title="文章加密访问"></a>文章加密访问</h1><p>实现效果图</p>
-<p>看我這篇文章，传送门—-&gt;<a href="http://javaweb.win/2017/06/05/site3/" target="_blank" rel="external">一碗汤不热</a></p>
+<p>看我這篇文章，传送门—-&gt;<a href="http://javaweb.win/2017/06/05/site3/">一碗汤不热</a></p>
 <p>具体实现方法</p>
 <p>打开<code>themes-&gt;next-&gt;layout-&gt;_partials-&gt;head.swig</code>文件,在<head>标签内插入这样一段代码：</head></p>
 <pre><code>&lt;script&gt;
@@ -697,7 +697,7 @@ copyright: true
 <li><a href="http://thief.one/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/" target="_blank" rel="external">http://thief.one/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</a></li>
 </ol>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>以上功能我基本都已经明白其中原理，也部署在博客当中，总结分享出来给大家以供学习之用，有些功能是看的很多大神文章，在此深深感谢，从建立博客之初到现在，学到了很多未知的知识，成就感爆棚。</p>
-<p><center><a href="http://gdzios.eward.win/">一碗汤不热</a></center></p>
+<p><center><a href="http://gdzios.eward.win/" target="_blank" rel="external">一碗汤不热</a></center></p>
 ]]></content>
     
     <summary type="html">
@@ -709,19 +709,19 @@ copyright: true
     
     </summary>
     
-      <category term="Hexo" scheme="http://gdzios.eward.win/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://javaweb.win/categories/Hexo/"/>
     
     
-      <category term="Hexo主题" scheme="http://gdzios.eward.win/tags/Hexo%E4%B8%BB%E9%A2%98/"/>
+      <category term="Hexo主题" scheme="http://javaweb.win/tags/Hexo%E4%B8%BB%E9%A2%98/"/>
     
-      <category term="个性化" scheme="http://gdzios.eward.win/tags/%E4%B8%AA%E6%80%A7%E5%8C%96/"/>
+      <category term="个性化" scheme="http://javaweb.win/tags/%E4%B8%AA%E6%80%A7%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript正则表达式</title>
-    <link href="http://gdzios.eward.win/2017/06/08/site4/"/>
-    <id>http://gdzios.eward.win/2017/06/08/site4/</id>
+    <link href="http://javaweb.win/2017/06/08/site4/"/>
+    <id>http://javaweb.win/2017/06/08/site4/</id>
     <published>2017-06-08T06:29:45.000Z</published>
     <updated>2017-06-08T08:10:31.217Z</updated>
     
@@ -780,21 +780,21 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
     
     </summary>
     
-      <category term="web前端" scheme="http://gdzios.eward.win/categories/web%E5%89%8D%E7%AB%AF/"/>
+      <category term="web前端" scheme="http://javaweb.win/categories/web%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Script" scheme="http://gdzios.eward.win/tags/Script/"/>
+      <category term="Script" scheme="http://javaweb.win/tags/Script/"/>
     
-      <category term="正则表达式" scheme="http://gdzios.eward.win/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+      <category term="正则表达式" scheme="http://javaweb.win/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
-      <category term="js" scheme="http://gdzios.eward.win/tags/js/"/>
+      <category term="js" scheme="http://javaweb.win/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>Java面试集锦：常见的java异常信息</title>
-    <link href="http://gdzios.eward.win/2017/06/05/site3/"/>
-    <id>http://gdzios.eward.win/2017/06/05/site3/</id>
+    <link href="http://javaweb.win/2017/06/05/site3/"/>
+    <id>http://javaweb.win/2017/06/05/site3/</id>
     <published>2017-06-05T01:39:28.000Z</published>
     <updated>2017-06-23T03:01:22.780Z</updated>
     
@@ -807,7 +807,7 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
 <p>如果说Error类代表了系统和编译的错误；那 Exception类就代表了标准Java库方法所激发的异常。Error类的异常是不允许捕获的，而发生Exception异常的程序可以通过捕获处理后正常运行保持程序的可读性及可靠性。</p>
 <p>这其中 Exception类还包含运行异常类（Runtime_Exception）和非运行异常类（Non_RuntimeException）这两个直接的子类。</p>
 <p>运行异常类对应于编译错误，它是指Java程序在运行时产生的由解释器引发的各种异常。运行异常可能出现在任何地方，且出现频率很高，出现运行错误往往表示代码有错误，如：算数异常（如被0除）、下标异常（如数组越界）等。</p>
-<p>非运行异常又称为可检测异常。Java编译器利用分析方法或构造方法中可能产生的结果来检测Java程序中是否含有检测异常的处理程序，对于每个可能的可检测异常，方法或构造方法的throws子句必须列出该异常对应的类。如：java.lang java.util 、 <a href="http://gdzios.eward.win">http://java.net中定义的异常都是非运行异常。</a></p>
+<p>非运行异常又称为可检测异常。Java编译器利用分析方法或构造方法中可能产生的结果来检测Java程序中是否含有检测异常的处理程序，对于每个可能的可检测异常，方法或构造方法的throws子句必须列出该异常对应的类。如：java.lang java.util 、 <a href="http://gdzios.eward.win" target="_blank" rel="external">http://java.net中定义的异常都是非运行异常。</a></p>
 <p>我整理了一下，常见的Java Exception异常</p>
 <ol>
 <li><p>java.lang.ArithmeticException：算术条件异常。譬如：整数除零等。 </p>
@@ -957,27 +957,27 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
     
     </summary>
     
-      <category term="java" scheme="http://gdzios.eward.win/categories/java/"/>
+      <category term="java" scheme="http://javaweb.win/categories/java/"/>
     
-      <category term="java异常" scheme="http://gdzios.eward.win/categories/java/java%E5%BC%82%E5%B8%B8/"/>
+      <category term="java异常" scheme="http://javaweb.win/categories/java/java%E5%BC%82%E5%B8%B8/"/>
     
     
-      <category term="java异常" scheme="http://gdzios.eward.win/tags/java%E5%BC%82%E5%B8%B8/"/>
+      <category term="java异常" scheme="http://javaweb.win/tags/java%E5%BC%82%E5%B8%B8/"/>
     
-      <category term="异常处理" scheme="http://gdzios.eward.win/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
+      <category term="异常处理" scheme="http://javaweb.win/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
     
-      <category term="异常信息" scheme="http://gdzios.eward.win/tags/%E5%BC%82%E5%B8%B8%E4%BF%A1%E6%81%AF/"/>
+      <category term="异常信息" scheme="http://javaweb.win/tags/%E5%BC%82%E5%B8%B8%E4%BF%A1%E6%81%AF/"/>
     
-      <category term="java学习" scheme="http://gdzios.eward.win/tags/java%E5%AD%A6%E4%B9%A0/"/>
+      <category term="java学习" scheme="http://javaweb.win/tags/java%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="java面试" scheme="http://gdzios.eward.win/tags/java%E9%9D%A2%E8%AF%95/"/>
+      <category term="java面试" scheme="http://javaweb.win/tags/java%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>为Hexo添加文章置顶功能</title>
-    <link href="http://gdzios.eward.win/2017/06/02/site2/"/>
-    <id>http://gdzios.eward.win/2017/06/02/site2/</id>
+    <link href="http://javaweb.win/2017/06/02/site2/"/>
+    <id>http://javaweb.win/2017/06/02/site2/</id>
     <published>2017-06-02T05:21:30.000Z</published>
     <updated>2017-06-23T05:28:01.793Z</updated>
     
@@ -1070,19 +1070,19 @@ date: 201-06-01 11:44:40
     
     </summary>
     
-      <category term="Hexo" scheme="http://gdzios.eward.win/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://javaweb.win/categories/Hexo/"/>
     
     
-      <category term="博客" scheme="http://gdzios.eward.win/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="http://javaweb.win/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="文章置顶" scheme="http://gdzios.eward.win/tags/%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/"/>
+      <category term="文章置顶" scheme="http://javaweb.win/tags/%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/"/>
     
   </entry>
   
   <entry>
     <title>MarkdownPad免费激活注册</title>
-    <link href="http://gdzios.eward.win/2017/05/16/writ/"/>
-    <id>http://gdzios.eward.win/2017/05/16/writ/</id>
+    <link href="http://javaweb.win/2017/05/16/writ/"/>
+    <id>http://javaweb.win/2017/05/16/writ/</id>
     <published>2017-05-16T11:01:37.000Z</published>
     <updated>2017-06-05T03:53:13.631Z</updated>
     
@@ -1141,21 +1141,21 @@ mOm4Q8CaLwwzZmF9NKV2CjlmUTqOszJv5abS5YdrPavAR6QxGjZfya3nA2ASd6HN
     
     </summary>
     
-      <category term="工具" scheme="http://gdzios.eward.win/categories/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://javaweb.win/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-      <category term="MarkdownPad" scheme="http://gdzios.eward.win/tags/MarkdownPad/"/>
+      <category term="MarkdownPad" scheme="http://javaweb.win/tags/MarkdownPad/"/>
     
-      <category term="MarkdownPad注册码" scheme="http://gdzios.eward.win/tags/MarkdownPad%E6%B3%A8%E5%86%8C%E7%A0%81/"/>
+      <category term="MarkdownPad注册码" scheme="http://javaweb.win/tags/MarkdownPad%E6%B3%A8%E5%86%8C%E7%A0%81/"/>
     
-      <category term="文本编辑工具" scheme="http://gdzios.eward.win/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%B7%A5%E5%85%B7/"/>
+      <category term="文本编辑工具" scheme="http://javaweb.win/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>微信小程序开发之转发功能</title>
-    <link href="http://gdzios.eward.win/2017/05/16/site/"/>
-    <id>http://gdzios.eward.win/2017/05/16/site/</id>
+    <link href="http://javaweb.win/2017/05/16/site/"/>
+    <id>http://javaweb.win/2017/05/16/site/</id>
     <published>2017-05-16T10:28:08.000Z</published>
     <updated>2017-06-05T03:54:04.512Z</updated>
     
@@ -1179,14 +1179,14 @@ withShareTicket: true
     
     </summary>
     
-      <category term="微信小程序" scheme="http://gdzios.eward.win/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="微信小程序" scheme="http://javaweb.win/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     
-      <category term="微信小程序" scheme="http://gdzios.eward.win/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="微信小程序" scheme="http://javaweb.win/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
-      <category term="转发功能" scheme="http://gdzios.eward.win/tags/%E8%BD%AC%E5%8F%91%E5%8A%9F%E8%83%BD/"/>
+      <category term="转发功能" scheme="http://javaweb.win/tags/%E8%BD%AC%E5%8F%91%E5%8A%9F%E8%83%BD/"/>
     
-      <category term="小程序开发" scheme="http://gdzios.eward.win/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/"/>
+      <category term="小程序开发" scheme="http://javaweb.win/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
