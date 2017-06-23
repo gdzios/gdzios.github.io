@@ -138,7 +138,7 @@
 <meta property="og:url" content="http://gdzios.eward.win/2017/06/23/site7/index.html">
 <meta property="og:site_name" content="一碗汤不热">
 <meta property="og:description" content="Jstl介绍什么是Jstl？Jstl全称：Java Servlet Standard Tag Library,即JSP标准标签库，它包含了我们在开发jsp页面时经常用到的一组标准标签库，这些标签为我们提供了一种不用嵌入java代码，就可以开发复杂的jsp页面的途径。  Jstl通常会与EL表达式合作实现JSP页面的编号。">
-<meta property="og:updated_time" content="2017-06-23T05:21:13.409Z">
+<meta property="og:updated_time" content="2017-06-23T05:40:20.477Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JSP Standard Tag Library">
 <meta name="twitter:description" content="Jstl介绍什么是Jstl？Jstl全称：Java Servlet Standard Tag Library,即JSP标准标签库，它包含了我们在开发jsp页面时经常用到的一组标准标签库，这些标签为我们提供了一种不用嵌入java代码，就可以开发复杂的jsp页面的途径。  Jstl通常会与EL表达式合作实现JSP页面的编号。">
@@ -450,38 +450,35 @@
       
 
       
-        <h1 id="Jstl介绍"><a href="#Jstl介绍" class="headerlink" title="Jstl介绍"></a>Jstl介绍</h1><h2 id="什么是Jstl？"><a href="#什么是Jstl？" class="headerlink" title="什么是Jstl？"></a>什么是Jstl？</h2><p>Jstl全称：Java Servlet Standard Tag Library,即JSP标准标签库，它包含了我们在开发jsp页面时经常用到的一组标准标签库，这些标签为我们提供了一种不用嵌入java代码，就可以开发复杂的jsp页面的途径。</p>
-<p> Jstl通常会与EL表达式合作实现JSP页面的编号。</p>
+        <h1 id="Jstl介绍"><a href="#Jstl介绍" class="headerlink" title="Jstl介绍"></a>Jstl介绍</h1><h2 id="什么是Jstl？"><a href="#什么是Jstl？" class="headerlink" title="什么是Jstl？"></a>什么是Jstl？</h2><p><code>Jstl</code>全称：<code>Java Servlet Standard Tag Library</code>,即<code>JSP</code>标准标签库，它包含了我们在开发<code>jsp</code>页面时经常用到的一组标准标签库，这些标签为我们提供了一种不用嵌入<code>java</code>代码，就可以开发复杂的jsp页面的途径。</p>
+<p> <code>Jstl</code>通常会与EL表达式合作实现<code>JSP</code>页面的编号。</p>
 <a id="more"></a>
 <h2 id="Jstl环境搭建"><a href="#Jstl环境搭建" class="headerlink" title="Jstl环境搭建"></a>Jstl环境搭建</h2><ol>
-<li>导入jar包</li>
+<li>导入<code>jar</code>包</li>
 </ol>
 <p>2.引用核心标签库<br> <code>&lt;%@ taglib uri=&quot;http://java.sun.com/jsp/jstl/core&quot; prefix=&quot;c&quot;%&gt;</code></p>
-<p>一般情况下，用MyEclipse都会默认导入jar包的，手动<a href="http://archive.apache.org/dist/jakarta/taglibs/standard/bnaries" target="_blank" rel="external">下载地址</a></p>
+<p>一般情况下，用<code>MyEclipse</code>都会默认导入jar包的，手动<a href="http://archive.apache.org/dist/jakarta/taglibs/standard/bnaries" target="_blank" rel="external">下载地址</a></p>
 <h1 id="Jstl标准标签库"><a href="#Jstl标准标签库" class="headerlink" title="Jstl标准标签库"></a>Jstl标准标签库</h1><p>核心标签库</p>
 <h2 id="按照功能的不同又分为："><a href="#按照功能的不同又分为：" class="headerlink" title="按照功能的不同又分为："></a>按照功能的不同又分为：</h2><ol>
 <li>通用标签库：<code>set</code> <code>out</code> <code>remove</code></li>
 <li>条件标签库：<code>if</code> <code>choose</code></li>
 <li>迭代标签库：<code>forEach</code></li>
 </ol>
-<h2 id="通用标签库："><a href="#通用标签库：" class="headerlink" title="通用标签库："></a>通用标签库：</h2><p>用于在jsp页面内设置，删除和显示变量，</p>
-<h3 id="set：设置置顶范围的变量值，其语法格式分为两种："><a href="#set：设置置顶范围的变量值，其语法格式分为两种：" class="headerlink" title="set：设置置顶范围的变量值，其语法格式分为两种："></a>set：设置置顶范围的变量值，其语法格式分为两种：</h3><p>将value值存储到范围为scope的变量variable中</p>
+<h2 id="通用标签库："><a href="#通用标签库：" class="headerlink" title="通用标签库："></a>通用标签库：</h2><p>用于在<code>jsp</code>页面内设置，删除和显示变量，</p>
+<h3 id="set：设置置顶范围的变量值，其语法格式分为两种："><a href="#set：设置置顶范围的变量值，其语法格式分为两种：" class="headerlink" title="set：设置置顶范围的变量值，其语法格式分为两种："></a>set：设置置顶范围的变量值，其语法格式分为两种：</h3><p>将<code>value</code>值存储到范围为<code>scope</code>的变量<code>variable</code>中</p>
 <pre><code>&lt;c:set var=&quot;variable&quot; value=&quot;&quot; scope=&quot;scope&quot;/&gt;
-</code></pre><p>将value值存储到target对象的属性中</p>
+</code></pre><p>将<code>value</code>值存储到<code>target</code>对象的属性中</p>
 <pre><code>&lt;s:set target=&quot;target&quot; property=&quot;property&quot; value=&quot;&quot;/&gt;
 </code></pre><h3 id="out-计算表达式并将结果输出显示："><a href="#out-计算表达式并将结果输出显示：" class="headerlink" title="out:计算表达式并将结果输出显示："></a>out:计算表达式并将结果输出显示：</h3><p>不指定默认值</p>
-<c:out value="">
-
-<p>指定默认值</p>
-<c:out value="" default="default">
-
-<p>remove: 删除指定范围内的变量</p>
+<pre><code>&lt;c:out value=&quot;&quot; &gt;
+</code></pre><p>指定默认值</p>
+<pre><code>&lt;c:out value=&quot;&quot; default=&quot;default&quot; /&gt;
+</code></pre><p><code>remove</code>: 删除指定范围内的变量</p>
 <pre><code>&lt;c:remove var=&quot;value&quot; scope=&quot;scope&quot;/&gt;
-</code></pre><h2 id="条件标签库"><a href="#条件标签库" class="headerlink" title="条件标签库"></a>条件标签库</h2><p>if ：功能和java语言中的完全相同，</p>
-<c:if test="condition" var="varName" scope="scope">
-
-<p>test指条件 后面通常不写的：var存储判断后的结果， scope指定范围。</p>
-<p>choose：实现java语言中 if—else if—else</p>
+</code></pre><h2 id="条件标签库"><a href="#条件标签库" class="headerlink" title="条件标签库"></a>条件标签库</h2><p><code>if</code> ：功能和<code>java</code>语言中的完全相同，</p>
+<pre><code>&lt;c:if test=&quot;condition&quot; var=&quot;varName&quot; scope=&quot;scope&quot;/&gt;
+</code></pre><p><code>test</code>指条件 后面通常不写的：<code>var</code>存储判断后的结果，<code>scope</code>指定范围。</p>
+<p><code>choose</code>：实现java语言中 <code>if---else if---else</code></p>
 <pre><code>&lt;c:choose var = &quot;varName&quot; scope=&quot;scope&quot;&gt;
     &lt;c:when test=&quot;condition&quot;&gt;
         主体内容
@@ -498,7 +495,7 @@
 </code></pre><h3 id="指定语句的执行次数"><a href="#指定语句的执行次数" class="headerlink" title="指定语句的执行次数"></a>指定语句的执行次数</h3><pre><code>&lt;c:forEach var =&quot;varName&quot; varStatus=&quot;varStatusName&quot;
     begin =&quot;beginIndex&quot; end = &quot;endIndex&quot; step=&quot;step&quot;
 &lt;/c:forEach&gt;
-</code></pre></c:if></c:out></c:out>
+</code></pre>
       
     </div>
 
