@@ -131,21 +131,19 @@
 
 
 
-<meta name="description" content="前言之前无聊的时间调试了一个微信小程序。利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？ 赶紧打开微信开发工具 首先参考了一下:官方文档">
 <meta name="keywords" content="微信小程序,转发功能,小程序开发">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信小程序开发之转发功能">
 <meta property="og:url" content="http://javaweb.win/2017/05/16/site/index.html">
 <meta property="og:site_name" content="一碗汤不热">
-<meta property="og:description" content="前言之前无聊的时间调试了一个微信小程序。利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？ 赶紧打开微信开发工具 首先参考了一下:官方文档">
+<meta property="og:image" content="http://i.imgur.com/o5Hztx5.png">
 <meta property="og:image" content="http://i.imgur.com/o5Hztx5.png">
 <meta property="og:image" content="http://i.imgur.com/Vtzp2Kk.png">
 <meta property="og:image" content="http://i2.muimg.com/588926/675477204471cd0b.png">
 <meta property="og:image" content="http://i4.buimg.com/588926/38ee7a2359c59c0d.png">
-<meta property="og:updated_time" content="2017-06-05T03:54:04.512Z">
+<meta property="og:updated_time" content="2017-07-07T08:48:47.224Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序开发之转发功能">
-<meta name="twitter:description" content="前言之前无聊的时间调试了一个微信小程序。利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？ 赶紧打开微信开发工具 首先参考了一下:官方文档">
 <meta name="twitter:image" content="http://i.imgur.com/o5Hztx5.png">
 
 
@@ -455,15 +453,17 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前无聊的时间调试了一个微信小程序。<br>利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？</p>
-<p>赶紧打开微信开发工具</p>
-<p>首先参考了一下:<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/share.html?t=20161221" target="_blank" rel="external">官方文档</a><br><img src="http://i.imgur.com/o5Hztx5.png" alt="分享图片"></p>
+        <p><img src="http://i.imgur.com/o5Hztx5.png" alt="分享图片"></p>
 <a id="more"></a>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前无聊的时间调试了一个微信小程序。<br>利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？</p>
+<p>赶紧打开微信开发工具</p>
+<p>首先参考了一下:<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/share.html?t=20161221" target="_blank" rel="external">官方文档</a></p>
+<p><img src="http://i.imgur.com/o5Hztx5.png" alt="分享图片"></p>
 <h1 id="关键"><a href="#关键" class="headerlink" title="关键"></a>关键</h1><p>然后添加转发的显示按钮</p>
 <p><code>wx.showShareMenu({
 withShareTicket: true
 })</code></p>
-<p>这里有很多朋友不知道“path”路径该怎么填，其实就是填当前页面的路径比如我的：<br><img src="http://i.imgur.com/Vtzp2Kk.png" alt="公众号gdz_hz"><br>页面的路径加id,这个id就是小程序的场景值：<br><img src="http://i2.muimg.com/588926/675477204471cd0b.png" alt="公众号gdz_hz"><br>这个path路径填正确了，转发后朋友们才能点金进入小程序<br>完成后，点击右上角有转发功能<br><img src="http://i4.buimg.com/588926/38ee7a2359c59c0d.png" alt=""></p>
+<p>这里有很多朋友不知道<code>“path”</code>路径该怎么填，其实就是填当前页面的路径比如我的：<br><img src="http://i.imgur.com/Vtzp2Kk.png" alt="公众号gdz_hz"><br>页面的路径加id,这个id就是小程序的场景值：<br><img src="http://i2.muimg.com/588926/675477204471cd0b.png" alt="公众号gdz_hz"><br>这个path路径填正确了，转发后朋友们才能点金进入小程序<br>完成后，点击右上角有转发功能<br><img src="http://i4.buimg.com/588926/38ee7a2359c59c0d.png" alt=""></p>
 <p>真机测试也能进去就OK了。</p>
 
       
@@ -646,7 +646,7 @@ withShareTicket: true
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -657,7 +657,7 @@ withShareTicket: true
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -668,7 +668,7 @@ withShareTicket: true
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -972,7 +972,7 @@ withShareTicket: true
 
 
 <div class="theme-info">
-  <span class="post-count">本博共10.1k字</span>
+  <span class="post-count">本博共10.5k字</span>
 </div>
         
 <div class="busuanzi-count">

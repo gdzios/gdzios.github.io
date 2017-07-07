@@ -131,17 +131,16 @@
 
 
 
-<meta name="description" content="前言主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦）其实就是增加一个top值，在hexo生成html时，将top值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。">
 <meta name="keywords" content="博客,文章置顶">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为Hexo添加文章置顶功能">
 <meta property="og:url" content="http://javaweb.win/2017/06/02/site2/index.html">
 <meta property="og:site_name" content="一碗汤不热">
-<meta property="og:description" content="前言主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦）其实就是增加一个top值，在hexo生成html时，将top值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。">
-<meta property="og:updated_time" content="2017-06-23T05:28:01.793Z">
+<meta property="og:image" content="https://cdn.pixabay.com/photo/2017/03/13/10/31/greylag-goose-2139296__340.jpg">
+<meta property="og:updated_time" content="2017-07-07T08:56:55.654Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为Hexo添加文章置顶功能">
-<meta name="twitter:description" content="前言主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦）其实就是增加一个top值，在hexo生成html时，将top值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。">
+<meta name="twitter:image" content="https://cdn.pixabay.com/photo/2017/03/13/10/31/greylag-goose-2139296__340.jpg">
 
 
 
@@ -450,8 +449,9 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦）<br>其实就是增加一个<code>top</code>值，在<code>hexo</code>生成<code>html</code>时，将<code>top</code>值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。</p>
+        <p><img src="https://cdn.pixabay.com/photo/2017/03/13/10/31/greylag-goose-2139296__340.jpg" alt="博文置顶"></p>
 <a id="more"></a>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>主题竟然没有提供置顶功能….对于我这种强迫症来说，必须得弄上啊，度娘了一些资料，总算能实现其功能了，（只管实现功能哦）<br>其实就是增加一个<code>top</code>值，在<code>hexo</code>生成<code>html</code>时，将<code>top</code>值越高的排在前面就可以了，看我现在的博客就是；其实通过改时间也是可以的。</p>
 <h1 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h1><p>修改站点文件夹下<code>node_modules/hexo-generator-index/lib/generator.js</code>，在生成文章之前进行文章top值排序。</p>
 <pre><code>pst xxx
 scasca
@@ -519,7 +519,7 @@ module.exports = function(locals) {
     }
   });
 };`
-</code></pre><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在文章中，增加top值定义，值越大，文章排序越靠前。top值默认为0，若不设置top，则不参与排序。示例：</p>
+</code></pre><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>在文章中，增加<code>top</code>值定义，值越大，文章排序越靠前。<code>top</code>值默认为0，若不设置<code>top</code>，则不参与排序。示例：</p>
 <pre><code>title: 为Hexo添加文章置顶功能（三）
 categories: hexo
 tags: [文章置顶，一碗汤不热]
@@ -530,7 +530,7 @@ date: 201-06-01 11:44:40
 
 正文
 </code></pre><h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>這样修改是没有置顶那个标志的 但是能达到置顶功能就好了，哈哈。</p>
-<p>网站备份的时候，记得备份好文件node_modules/hexo-generator-index/lib/generator.js，因为这个文件既不是站点文件，也不是主题文件，而文件夹默认不参与git版本控制，所以迁移博客文件时很容易忽略。让我又想放弃hexo了（逃）</p>
+<p>网站备份的时候，记得备份好文件<code>node_modules/hexo-generator-index/lib/generator.js</code>，因为这个文件既不是站点文件，也不是主题文件，而文件夹默认不参与git版本控制，所以迁移博客文件时很容易忽略。让我又想放弃<code>hexo</code>了（逃）</p>
 
       
     </div>
@@ -714,7 +714,7 @@ date: 201-06-01 11:44:40
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -725,7 +725,7 @@ date: 201-06-01 11:44:40
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -736,7 +736,7 @@ date: 201-06-01 11:44:40
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1040,7 +1040,7 @@ date: 201-06-01 11:44:40
 
 
 <div class="theme-info">
-  <span class="post-count">本博共10.1k字</span>
+  <span class="post-count">本博共10.5k字</span>
 </div>
         
 <div class="busuanzi-count">

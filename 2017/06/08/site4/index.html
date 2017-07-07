@@ -131,20 +131,18 @@
 
 
 
-<meta name="description" content="概述正则表达式，又称为规则表达式，（Regular Expression）简写：RE,regex或regxp,计算机科学的一个概念。用来检索，替换那些符合某个模式（规则）的文本。 特点 灵活性，逻辑性和功能性非常的强； 可以迅速地采用极简单的方式达到字符串的复杂控制。 对于刚接触的人来说，比较晦涩难懂。">
 <meta name="keywords" content="Script,正则表达式,js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript正则表达式">
 <meta property="og:url" content="http://javaweb.win/2017/06/08/site4/index.html">
 <meta property="og:site_name" content="一碗汤不热">
-<meta property="og:description" content="概述正则表达式，又称为规则表达式，（Regular Expression）简写：RE,regex或regxp,计算机科学的一个概念。用来检索，替换那些符合某个模式（规则）的文本。 特点 灵活性，逻辑性和功能性非常的强； 可以迅速地采用极简单的方式达到字符串的复杂控制。 对于刚接触的人来说，比较晦涩难懂。">
+<meta property="og:image" content="https://cdn.pixabay.com/photo/2017/06/21/13/37/lizard-2427248__340.jpg">
 <meta property="og:image" content="http://i.imgur.com/LdzbtIF.png">
 <meta property="og:image" content="http://i.imgur.com/k7TXdl9.png">
-<meta property="og:updated_time" content="2017-06-08T08:10:31.217Z">
+<meta property="og:updated_time" content="2017-07-07T09:03:37.422Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript正则表达式">
-<meta name="twitter:description" content="概述正则表达式，又称为规则表达式，（Regular Expression）简写：RE,regex或regxp,计算机科学的一个概念。用来检索，替换那些符合某个模式（规则）的文本。 特点 灵活性，逻辑性和功能性非常的强； 可以迅速地采用极简单的方式达到字符串的复杂控制。 对于刚接触的人来说，比较晦涩难懂。">
-<meta name="twitter:image" content="http://i.imgur.com/LdzbtIF.png">
+<meta name="twitter:image" content="https://cdn.pixabay.com/photo/2017/06/21/13/37/lizard-2427248__340.jpg">
 
 
 
@@ -453,13 +451,14 @@
       
 
       
-        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>正则表达式，又称为规则表达式，（<code>Regular Expression</code>）简写：<code>RE</code>,<code>regex</code>或<code>regxp</code>,计算机科学的一个概念。用来检索，替换那些符合某个模式（规则）的文本。</p>
+        <p><img src="https://cdn.pixabay.com/photo/2017/06/21/13/37/lizard-2427248__340.jpg" alt="JavaScript正则表达式"></p>
+<a id="more"></a>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>正则表达式，又称为规则表达式，（<code>Regular Expression</code>）简写：<code>RE</code>,<code>regex</code>或<code>regxp</code>,计算机科学的一个概念。用来检索，替换那些符合某个模式（规则）的文本。</p>
 <h1 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h1><ol>
 <li>灵活性，逻辑性和功能性非常的强；</li>
 <li>可以迅速地采用极简单的方式达到字符串的复杂控制。</li>
 <li>对于刚接触的人来说，比较晦涩难懂。</li>
 </ol>
-<a id="more"></a>
 <h1 id="匹配原理"><a href="#匹配原理" class="headerlink" title="匹配原理"></a>匹配原理</h1><p>现在有字符串”<code>abcde</code>“,用正则表达式<code>/bcd/</code>进行匹配。首先是表达式<code>b</code>字符在字符串中查找第二个字符b匹配上了，然后用表达式c字符在字符串的<code>b</code>字符之后查找，如果是<code>c</code>字符则匹配成功，再次使用表达式<code>d</code>字符在字符串的<code>c</code>字符之后查找。如果表达式<code>c</code>字符在字符串的<code>b</code>字符之后没能匹配到<code>c</code>字符，则匹配失败，将再次用表达式<code>b</code>字符开始从字符串的<code>b</code>字符之后开始查找。<br>  当表达式没有说明是全局查找时，表达式找到第一个匹配成功的字符串后就返回。当要做全局查找时，将可能返回一个结果数组。</p>
 <h1 id="常用于表单验证"><a href="#常用于表单验证" class="headerlink" title="常用于表单验证"></a>常用于表单验证</h1><ol>
 <li>减轻服务器的压力</li>
@@ -680,7 +679,7 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -691,7 +690,7 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -702,7 +701,7 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1006,7 +1005,7 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
 
 
 <div class="theme-info">
-  <span class="post-count">本博共10.1k字</span>
+  <span class="post-count">本博共10.5k字</span>
 </div>
         
 <div class="busuanzi-count">

@@ -131,18 +131,15 @@
 
 
 
-<meta name="description" content="目的這篇文章主要介绍了java平时常见的一些异常报错信息，我以文档的形式记录下来，用来复习巩固及其面试用，平时早上地铁公交拿出手机可以看一下。 异常类基本就那两种类型： Error Exception">
 <meta name="keywords" content="java异常,异常处理,异常信息,java学习,java面试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java面试集锦：常见的java异常信息">
 <meta property="og:url" content="http://javaweb.win/2017/06/05/site3/index.html">
 <meta property="og:site_name" content="一碗汤不热">
-<meta property="og:description" content="目的這篇文章主要介绍了java平时常见的一些异常报错信息，我以文档的形式记录下来，用来复习巩固及其面试用，平时早上地铁公交拿出手机可以看一下。 异常类基本就那两种类型： Error Exception">
 <meta property="og:image" content="http://i.imgur.com/40LnvRk.jpg">
-<meta property="og:updated_time" content="2017-06-23T03:01:22.780Z">
+<meta property="og:updated_time" content="2017-07-07T09:02:18.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java面试集锦：常见的java异常信息">
-<meta name="twitter:description" content="目的這篇文章主要介绍了java平时常见的一些异常报错信息，我以文档的形式记录下来，用来复习巩固及其面试用，平时早上地铁公交拿出手机可以看一下。 异常类基本就那两种类型： Error Exception">
 <meta name="twitter:image" content="http://i.imgur.com/40LnvRk.jpg">
 
 
@@ -463,113 +460,119 @@
       
 
       
-        <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>這篇文章主要介绍了java平时常见的一些异常报错信息，我以文档的形式记录下来，用来复习巩固及其面试用，平时早上地铁公交拿出手机可以看一下。</p>
+        <p><img src="http://i.imgur.com/40LnvRk.jpg" alt="Java异常类结构图"></p>
+<a id="more"></a>
+<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>這篇文章主要介绍了<code>java</code>平时常见的一些异常报错信息，我以文档的形式记录下来，用来复习巩固及其面试用，平时早上地铁公交拿出手机可以看一下。</p>
 <h1 id="异常类基本就那两种类型："><a href="#异常类基本就那两种类型：" class="headerlink" title="异常类基本就那两种类型："></a>异常类基本就那两种类型：</h1><ol>
 <li><code>Error</code></li>
-<li><code>Exception</code><br><img src="http://i.imgur.com/40LnvRk.jpg" alt="Java异常类结构图"></li>
+<li><code>Exception</code></li>
 </ol>
-<a id="more"></a>
-<p>如果说Error类代表了系统和编译的错误；那 Exception类就代表了标准Java库方法所激发的异常。Error类的异常是不允许捕获的，而发生Exception异常的程序可以通过捕获处理后正常运行保持程序的可读性及可靠性。</p>
-<p>这其中 Exception类还包含运行异常类（Runtime_Exception）和非运行异常类（Non_RuntimeException）这两个直接的子类。</p>
-<p>运行异常类对应于编译错误，它是指Java程序在运行时产生的由解释器引发的各种异常。运行异常可能出现在任何地方，且出现频率很高，出现运行错误往往表示代码有错误，如：算数异常（如被0除）、下标异常（如数组越界）等。</p>
-<p>非运行异常又称为可检测异常。Java编译器利用分析方法或构造方法中可能产生的结果来检测Java程序中是否含有检测异常的处理程序，对于每个可能的可检测异常，方法或构造方法的throws子句必须列出该异常对应的类。如：java.lang java.util 、 <a href="http://gdzios.eward.win" target="_blank" rel="external">http://java.net中定义的异常都是非运行异常。</a></p>
-<p>我整理了一下，常见的Java Exception异常</p>
+<p>如果说<code>Error</code>类代表了系统和编译的错误；那 <code>Exception</code>类就代表了标准<code>Java</code>库方法所激发的异常。<code>Error</code>类的异常是不允许捕获的，而发生<code>Exception</code>异常的程序可以通过捕获处理后正常运行保持程序的可读性及可靠性。</p>
+<p>这其中 <code>Exception</code>类还包含运行异常类（<code>Runtime_Exception</code>）和非运行异常类（<code>Non_RuntimeException</code>）这两个直接的子类。</p>
+<p>运行异常类对应于编译错误，它是指<code>Java</code>程序在运行时产生的由解释器引发的各种异常。运行异常可能出现在任何地方，且出现频率很高，出现运行错误往往表示代码有错误，如：算数异常（如被0除）、下标异常（如数组越界）等。</p>
+<p>非运行异常又称为可检测异常。<code>Java</code>编译器利用分析方法或构造方法中可能产生的结果来检测Java程序中是否含有检测异常的处理程序，对于每个可能的可检测异常，方法或构造方法的<code>throws</code>子句必须列出该异常对应的类。如：<code>java.lang java.util</code> 、 <a href="http://gdzios.eward.win" target="_blank" rel="external">http://java.net中定义的异常都是非运行异常。</a></p>
+<p>我整理了一下，常见的<code>Java Exception</code>异常</p>
 <ol>
-<li><p>java.lang.ArithmeticException：算术条件异常。譬如：整数除零等。 </p>
+<li><p><code>java.lang.ArithmeticException</code>：算术条件异常。譬如：整数除零等。 </p>
 </li>
-<li><p>java.lang.ArrayIndexOutOfBoundsException：数组索引越界异常。当对数组的索引值为负数或大于等于数组大小时抛出。</p>
+<li><p><code>java.lang.ArrayIndexOutOfBoundsException</code>：数组索引越界异常。当对数组的索引值为负数或大于等于数组大小时抛出。</p>
 </li>
-<li><p>java.lang.ArrayStoreException：数组存储异常。当向数组中存放非数组声明类型对象时抛出。</p>
+<li><p><code>java.lang.ArrayStoreException：</code>数组存储异常。当向数组中存放非数组声明类型对象时抛出。</p>
 </li>
-<li><p>java.lang.ClassCastException：类造型异常。假设有类A和B（A不是B的父类或子类），O是A的实例，那么当强制将O构造为类B的实例时抛出该异常。该异常经常被称为强制类型转换异常。</p>
+<li><p><code>java.lang.ClassCastException</code>：类造型异常。假设有类A和B（A不是B的父类或子类），O是A的实例，那么当强制将O构造为类B的实例时抛出该异常。该异常经常被称为强制类型转换异常。</p>
 </li>
-<li><p>java.lang.ClassNotFoundException：找不到类异常。当应用试图根据字符串形式的类名构造类，而在遍历CLASSPAH之后找不到对应名称的class文件时，抛出该异常。</p>
+<li><p><code>java.lang.ClassNotFoundException</code>：找不到类异常。当应用试图根据字符串形式的类名构造类，而在遍历CLASSPAH之后找不到对应名称的class文件时，抛出该异常。</p>
 </li>
-<li><p>java.lang.CloneNotSupportedException：不支持克隆异常。当没有实现Cloneable接口或者不支持克隆方法时,调用其clone方法则抛出该异常。</p>
+<li><p><code>java.lang.CloneNotSupportedException</code>：不支持克隆异常。当没有实现Cloneable接口或者不支持克隆方法时,调用其clone方法则抛出该异常。</p>
 </li>
-<li><p>java.lang.EnumConstantNotPresentException：枚举常量不存在异常。当应用试图通过名称和枚举类型访问一个枚举对象，但该枚举对象并不包含常量时，抛出该异常。</p>
+<li><p><code>java.lang.EnumConstantNotPresentException</code>：枚举常量不存在异常。当应用试图通过名称和枚举类型访问一个枚举对象，但该枚举对象并不包含常量时，抛出该异常。</p>
 </li>
-<li><p>java.lang.Exception：根异常。用以描述应用程序希望捕获的情况。</p>
+<li><p><code>java.lang.Exception</code>：根异常。用以描述应用程序希望捕获的情况。</p>
 </li>
-<li><p>java.lang.IllegalAccessException：违法的访问异常。当应用试图通过反射方式创建某个类的实例、访问该类属性、调用该类方法，而当时又无法访问类的、属性的、方法的或构造方法的定义时抛出该异常。</p>
+<li><p><code>java.lang.IllegalAccessException</code>：违法的访问异常。当应用试图通过反射方式创建某个类的实例、访问该类属性、调用该类方法，而当时又无法访问类的、属性的、方法的或构造方法的定义时抛出该异常。</p>
 </li>
-<li><p>java.lang.IllegalMonitorStateException：违法的监控状态异常。当某个线程试图等待一个自己并不拥有的对象（O）的监控器或者通知其他线程等待该对象（O）的监控器时，抛出该异常。</p>
+<li><p><code>java.lang.IllegalMonitorStateException</code>：违法的监控状态异常。当某个线程试图等待一个自己并不拥有的对象（O）的监控器或者通知其他线程等待该对象（O）的监控器时，抛出该异常。</p>
 </li>
-<li><p>java.lang.IllegalStateException：违法的状态异常。当在Java环境和应用尚未处于某个方法的合法调用状态，而调用了该方法时，抛出该异常。</p>
+<li><p><code>java.lang.IllegalStateException</code>：违法的状态异常。当在<code>Java</code>环境和应用尚未处于某个方法的合法调用状态，而调用了该方法时，抛出该异常。</p>
 </li>
-<li><p>java.lang.IllegalThreadStateException：违法的线程状态异常。当县城尚未处于某个方法的合法调用状态，而调用了该方法时，抛出异常。</p>
+</ol>
+<p>12.<code>java.lang.IllegalThreadStateException</code>：违法的线程状态异常。当县城尚未处于某个方法的合法调用状态，而调用了该方法时，抛出异常。</p>
+<ol>
+<li><code>java.lang.IndexOutOfBoundsException</code>：索引越界异常。当访问某个序列的索引值小于0或大于等于序列大小时，抛出该异常。</li>
+</ol>
+<p>14.<code>java.lang.InstantiationException</code>：实例化异常。当试图通过<code>newInstance</code>方法创建某个类的实例，而该类是一个抽象类或接口时，抛出该异常。</p>
+<ol>
+<li><p><code>java.lang.InterruptedException</code>：被中止异常。当某个线程处于长时间的等待、休眠或其他暂停状态，而此时其他的线程通过Thread的<code>interrupt</code>方法终止该线程时抛出该异常。</p>
 </li>
-<li><p>java.lang.IndexOutOfBoundsException：索引越界异常。当访问某个序列的索引值小于0或大于等于序列大小时，抛出该异常。</p>
+<li><p><code>java.lang.NegativeArraySizeException</code>：数组大小为负值异常。当使用负数大小值创建数组时抛出该异常。</p>
 </li>
-<li><p>java.lang.InstantiationException：实例化异常。当试图通过newInstance方法创建某个类的实例，而该类是一个抽象类或接口时，抛出该异常。</p>
+</ol>
+<p>17.<code>java.lang.NoSuchFieldException：</code>属性不存在异常。当访问某个类的不存在的属性时抛出该异常。</p>
+<ol>
+<li><p><code>java.lang.NoSuchMethodException</code>：方法不存在异常。当访问某个类的不存在的方法时抛出该异常。</p>
 </li>
-<li><p>java.lang.InterruptedException：被中止异常。当某个线程处于长时间的等待、休眠或其他暂停状态，而此时其他的线程通过Thread的interrupt方法终止该线程时抛出该异常。</p>
+<li><p><code>java.lang.NullPointerException</code>：空指针异常。当应用试图在要求使用对象的地方使用了null时，抛出该异常。譬如：调用<code>null</code>对象的实例方法、访问<code>null</code>对象的属性、计算<code>null</code>对象的长度、使用<code>throw</code>语句抛出<code>null</code>等等。</p>
 </li>
-<li><p>java.lang.NegativeArraySizeException：数组大小为负值异常。当使用负数大小值创建数组时抛出该异常。</p>
+<li><p><code>java.lang.NumberFormatException</code>：数字格式异常。当试图将一个<code>String</code>转换为指定的数字类型，而该字符串确不满足数字类型要求的格式时，抛出该异常。</p>
 </li>
-<li><p>java.lang.NoSuchFieldException：属性不存在异常。当访问某个类的不存在的属性时抛出该异常。</p>
+<li><p><code>java.lang.RuntimeException</code>：运行时异常。是所有Java虚拟机正常操作期间可以被抛出的异常的父类。</p>
 </li>
-<li><p>java.lang.NoSuchMethodException：方法不存在异常。当访问某个类的不存在的方法时抛出该异常。</p>
+<li><p><code>java.lang.SecurityException</code>：安全异常。由安全管理器抛出，用于指示违反安全情况的异常。</p>
 </li>
-<li><p>java.lang.NullPointerException：空指针异常。当应用试图在要求使用对象的地方使用了null时，抛出该异常。譬如：调用null对象的实例方法、访问null对象的属性、计算null对象的长度、使用throw语句抛出null等等。</p>
+<li><p><code>java.lang.StringIndexOutOfBoundsException</code>：字符串索引越界异常。当使用索引值访问某个字符串中的字符，而该索引值小于0或大于等于序列大小时，抛出该异常。</p>
 </li>
-<li><p>java.lang.NumberFormatException：数字格式异常。当试图将一个String转换为指定的数字类型，而该字符串确不满足数字类型要求的格式时，抛出该异常。</p>
+<li><p><code>java.lang.TypeNotPresentException</code>：类型不存在异常。当应用试图以某个类型名称的字符串表达方式访问该类型，但是根据给定的名称又找不到该类型是抛出该异常。该异常与<code>ClassNotFoundException</code>的区别在于该异常是<code>unchecked</code>（不被检查）异常，而<code>ClassNotFoundException是checked</code>（被检查）异常。</p>
 </li>
-<li><p>java.lang.RuntimeException：运行时异常。是所有Java虚拟机正常操作期间可以被抛出的异常的父类。</p>
-</li>
-<li><p>java.lang.SecurityException：安全异常。由安全管理器抛出，用于指示违反安全情况的异常。</p>
-</li>
-<li><p>java.lang.StringIndexOutOfBoundsException：字符串索引越界异常。当使用索引值访问某个字符串中的字符，而该索引值小于0或大于等于序列大小时，抛出该异常。</p>
-</li>
-<li><p>java.lang.TypeNotPresentException：类型不存在异常。当应用试图以某个类型名称的字符串表达方式访问该类型，但是根据给定的名称又找不到该类型是抛出该异常。该异常与ClassNotFoundException的区别在于该异常是unchecked（不被检查）异常，而ClassNotFoundException是checked（被检查）异常。</p>
-</li>
-<li><p>java.lang.UnsupportedOperationException：不支持的方法异常。指明请求的方法不被支持情况的异常。</p>
+<li><p><code>java.lang.UnsupportedOperationException</code>：不支持的方法异常。指明请求的方法不被支持情况的异常。</p>
 </li>
 </ol>
 <h1 id="常见的Error类异常"><a href="#常见的Error类异常" class="headerlink" title="常见的Error类异常"></a>常见的Error类异常</h1><ol>
-<li><p>java.lang.AbstractMethodError： 抽象方法错误。当应用试图调用抽象方法时抛出。</p>
+<li><p><code>java.lang.AbstractMethodError</code>： 抽象方法错误。当应用试图调用抽象方法时抛出。</p>
 </li>
-<li><p>java.lang.AssertionError： 断言错。用来指示一个断言失败的情况。</p>
+<li><p><code>java.lang.AssertionError</code>： 断言错。用来指示一个断言失败的情况。</p>
 </li>
-<li><p>java.lang.ClassCircularityError： 类循环依赖错误。在初始化一个类时，若检测到类之间循环依赖则抛出该异常。</p>
+<li><p><code>java.lang.ClassCircularityError</code>： 类循环依赖错误。在初始化一个类时，若检测到类之间循环依赖则抛出该异常。</p>
 </li>
-<li><p>java.lang.ClassFormatError： 类格式错误。当Java虚拟机试图从一个文件中读取Java类，而检测到该文件的内容不符合类的有效格式时抛出。</p>
+<li><p><code>java.lang.ClassFormatError</code>： 类格式错误。当Java虚拟机试图从一个文件中读取Java类，而检测到该文件的内容不符合类的有效格式时抛出。</p>
 </li>
-<li><p>java.lang.Error： 错误。是所有错误的基类，用于标识严重的程序运行问题。这些问题通常描述一些不应被应用程序捕获的反常情况。</p>
+</ol>
+<p>5.<code>java.lang.Error</code>： 错误。是所有错误的基类，用于标识严重的程序运行问题。这些问题通常描述一些不应被应用程序捕获的反常情况。</p>
+<ol>
+<li><p><code>java.lang.ExceptionInInitializerError</code>： 初始化程序错误。当执行一个类的静态初始化程序的过程中，发生了异常时抛出。静态初始化程序是指直接包含于类中的static语句段。</p>
 </li>
-<li><p>java.lang.ExceptionInInitializerError： 初始化程序错误。当执行一个类的静态初始化程序的过程中，发生了异常时抛出。静态初始化程序是指直接包含于类中的static语句段。</p>
+<li><p><code>java.lang.IllegalAccessError</code>： 违法访问错误。当一个应用试图访问、修改某个类的域（Field）或者调用其方法，但是又违反域或方法的可见性声明，则抛出该异常。</p>
 </li>
-<li><p>java.lang.IllegalAccessError： 违法访问错误。当一个应用试图访问、修改某个类的域（Field）或者调用其方法，但是又违反域或方法的可见性声明，则抛出该异常。</p>
+<li><p><code>java.lang.IncompatibleClassChangeError</code>： 不兼容的类变化错误。当正在执行的方法所依赖的类定义发生了不兼容的改变时，抛出该异常。一般在修改了应用中的某些类的声明定义而没有对整个应用重新编译而直接运行的情况下，容易引发该错误。</p>
 </li>
-<li><p>java.lang.IncompatibleClassChangeError： 不兼容的类变化错误。当正在执行的方法所依赖的类定义发生了不兼容的改变时，抛出该异常。一般在修改了应用中的某些类的声明定义而没有对整个应用重新编译而直接运行的情况下，容易引发该错误。</p>
+<li><p><code>java.lang.InstantiationError</code>： 实例化错误。当一个应用试图通过Java的new操作符构造一个抽象类或者接口时抛出该异常.</p>
 </li>
-<li><p>java.lang.InstantiationError： 实例化错误。当一个应用试图通过Java的new操作符构造一个抽象类或者接口时抛出该异常.</p>
+</ol>
+<p>10.<code>java.lang.InternalError</code>： 内部错误。用于指示Java虚拟机发生了内部错误。</p>
+<ol>
+<li><p><code>java.lang.LinkageError</code>： 链接错误。该错误及其所有子类指示某个类依赖于另外一些类，在该类编译之后，被依赖的类改变了其类定义而没有重新编译所有的类，进而引发错误的情况。</p>
 </li>
-<li><p>java.lang.InternalError： 内部错误。用于指示Java虚拟机发生了内部错误。</p>
+<li><p><code>java.lang.NoClassDefFoundError</code>： 未找到类定义错误。当Java虚拟机或者类装载器试图实例化某个类，而找不到该类的定义时抛出该错误。</p>
 </li>
-<li><p>java.lang.LinkageError： 链接错误。该错误及其所有子类指示某个类依赖于另外一些类，在该类编译之后，被依赖的类改变了其类定义而没有重新编译所有的类，进而引发错误的情况。</p>
+<li><p><code>java.lang.NoSuchFieldError</code>： 域不存在错误。当应用试图访问或者修改某类的某个域，而该类的定义中没有该域的定义时抛出该错误。</p>
 </li>
-<li><p>java.lang.NoClassDefFoundError： 未找到类定义错误。当Java虚拟机或者类装载器试图实例化某个类，而找不到该类的定义时抛出该错误。</p>
+<li><p><code>java.lang.NoSuchMethodError</code> ：方法不存在错误。当应用试图调用某类的某个方法，而该类的定义中没有该方法的定义时抛出该错误。</p>
 </li>
-<li><p>java.lang.NoSuchFieldError： 域不存在错误。当应用试图访问或者修改某类的某个域，而该类的定义中没有该域的定义时抛出该错误。</p>
+<li><p><code>java.lang.OutOfMemoryError</code>： 内存不足错误。当可用内存不足以让Java虚拟机分配给一个对象时抛出该错误。</p>
 </li>
-<li><p>java.lang.NoSuchMethodError ：方法不存在错误。当应用试图调用某类的某个方法，而该类的定义中没有该方法的定义时抛出该错误。</p>
+<li><p><code>java.lang.StackOverflowError</code>： 堆栈溢出错误。当一个应用递归调用的层次太深而导致堆栈溢出时抛出该错误。</p>
 </li>
-<li><p>java.lang.OutOfMemoryError： 内存不足错误。当可用内存不足以让Java虚拟机分配给一个对象时抛出该错误。</p>
+<li><p><code>java.lang.ThreadDeath</code>： 线程结束。当调用Thread类的stop方法时抛出该错误，用于指示线程结束。</p>
 </li>
-<li><p>java.lang.StackOverflowError： 堆栈溢出错误。当一个应用递归调用的层次太深而导致堆栈溢出时抛出该错误。</p>
+<li><p><code>java.lang.UnknownError</code>： 未知错误。用于指示Java虚拟机发生了未知严重错误的情况。</p>
 </li>
-<li><p>java.lang.ThreadDeath： 线程结束。当调用Thread类的stop方法时抛出该错误，用于指示线程结束。</p>
+<li><p><code>java.lang.UnsatisfiedLinkError</code>： 未满足的链接错误。当Java虚拟机未找到某个类的声明为native方法的本机语言定义时抛出。</p>
 </li>
-<li><p>java.lang.UnknownError： 未知错误。用于指示Java虚拟机发生了未知严重错误的情况。</p>
+</ol>
+<p>20.<code>java.lang.UnsupportedClassVersionError</code>： 不支持的类版本错误。当<code>Java</code>虚拟机试图从读取某个类文件，但是发现该文件的主、次版本号不被当前<code>Java</code>虚拟机支持的时候，抛出该错误。</p>
+<ol>
+<li><p><code>java.lang.VerifyError</code>： 验证错误。当验证器检测到某个类文件中存在内部不兼容或者安全问题时抛出该错误。</p>
 </li>
-<li><p>java.lang.UnsatisfiedLinkError： 未满足的链接错误。当Java虚拟机未找到某个类的声明为native方法的本机语言定义时抛出。</p>
-</li>
-<li><p>java.lang.UnsupportedClassVersionError： 不支持的类版本错误。当Java虚拟机试图从读取某个类文件，但是发现该文件的主、次版本号不被当前Java虚拟机支持的时候，抛出该错误。</p>
-</li>
-<li><p>java.lang.VerifyError： 验证错误。当验证器检测到某个类文件中存在内部不兼容或者安全问题时抛出该错误。</p>
-</li>
-<li><p>java.lang.VirtualMachineError： 虚拟机错误。用于指示虚拟机被破坏或者继续执行操作所需的资源不足的情况。</p>
+<li><p><code>java.lang.VirtualMachineError</code>： 虚拟机错误。用于指示虚拟机被破坏或者继续执行操作所需的资源不足的情况。</p>
 </li>
 <li><h1 id="最后面是几种不经常出现但是偶尔而会出现的Java异常"><a href="#最后面是几种不经常出现但是偶尔而会出现的Java异常" class="headerlink" title="最后面是几种不经常出现但是偶尔而会出现的Java异常"></a>最后面是几种不经常出现但是偶尔而会出现的Java异常</h1></li>
 <li><p>javax.servlet.jsp.JspException: Cannot retrieve mapping for action /Login ：这个异常中就是系统没有找到匹配的action也就是 action没有在struts-config.xml中定义。也可能是打错了字符或者是某些不符合规则，可以使用strutsconsole工具来检查。</p>
@@ -799,7 +802,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -810,7 +813,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -821,7 +824,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1125,7 +1128,7 @@
 
 
 <div class="theme-info">
-  <span class="post-count">本博共10.1k字</span>
+  <span class="post-count">本博共10.5k字</span>
 </div>
         
 <div class="busuanzi-count">
