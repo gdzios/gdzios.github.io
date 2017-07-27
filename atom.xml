@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://javaweb.win/"/>
-  <updated>2017-07-07T09:47:58.111Z</updated>
+  <updated>2017-07-27T14:28:24.791Z</updated>
   <id>http://javaweb.win/</id>
   
   <author>
@@ -16,17 +16,102 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>微信打开链接禁止页面下拉查看网址</title>
+    <link href="http://javaweb.win/2017/07/27/work/"/>
+    <id>http://javaweb.win/2017/07/27/work/</id>
+    <published>2017-07-27T13:52:25.000Z</published>
+    <updated>2017-07-27T14:28:24.791Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/Q50NRBL.jpg" alt="一碗汤不热"></p>
+<a id="more"></a>
+<p>最近为了给大家分享一些好玩有趣的软件，重新弄了几个网页。</p>
+<p>然后，网页写完了，上线后，发现在手机微信上面打开，下拉就能看到链接，然而我那几个域名呢，都没有经过icp备案，无奈啊，打开老是提示下面這个<br><img src="http://i.imgur.com/OWrUYWs.jpg" alt="一碗汤不热"><br>這个真的是很无奈呀，严重影响使用，这tx也是霸道，但是也没办法，只好妥协，换域名呗</p>
+<p>话归正题，换了一个备案的二级域名之后，打开链接秒打开呀，但是问题又来了，打开之后，下拉页面，就把我这链接给暴露了，那么怎么能不让这链接地址显示出来呢？？<img src="http://i.imgur.com/YuY9ttz.jpg" alt="一碗汤不热"><br>默默的去看了一下文档，总算给解决了</p>
+<pre><code>$(‘body’).on(‘touchmove’, function (event) {event.preventDefault();});
+or
+document.addEventListener(&apos;touchmove&apos;, function(e){e.preventDefault()}, false);
+</code></pre><p>但是這样会把原生的scroll效果也一同去掉了，毕竟这类事件是手机touchmova默认的事件行为，js直接来隐藏事件虐显尴尬。</p>
+<p>那么咱们就来个好点的<br><img src="http://i.imgur.com/YCNznLM.png" alt="一碗汤不热"></p>
+<p>這段js代码 就能固定页面 ，用户不能下拉页面滴，</p>
+<p>這样也就达成我的目的，</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+   &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;scroll&quot; style=&quot;position:absolute; overflow:scroll; -webkit-overflow-scrolling: touch; top:0; left:0; bottom:0; right:0&quot;&gt;
+ &lt;!--你的代码-- &gt; 
+&lt;/div&gt;
+&lt;/body&gt;
+
+&lt;script&gt;
+var overscroll = function(el) {
+  el.addEventListener(&apos;touchstart&apos;, function() {
+    var top = el.scrollTop
+      , totalScroll = el.scrollHeight
+      , currentScroll = top + el.offsetHeight
+    //If we&apos;re at the top or the bottom of the containers
+    //scroll, push up or down one pixel.
+    //
+    //this prevents the scroll from &quot;passing through&quot; to
+    //the body.
+    if(top === 0) {
+      el.scrollTop = 1
+    } else if(currentScroll === totalScroll) {
+      el.scrollTop = top - 1
+    }
+  })
+  el.addEventListener(&apos;touchmove&apos;, function(evt) {
+    //if the content is actually scrollable, i.e. the content is long enough
+    //that scrolling can occur
+    if(el.offsetHeight &lt; el.scrollHeight)
+      evt._isScroller = true
+  })
+}
+overscroll(document.querySelector(&apos;.scroll&apos;));
+document.body.addEventListener(&apos;touchmove&apos;, function(evt) {
+  //In this case, the default behavior is scrolling the body, which
+  //would result in an overflow.  Since we don&apos;t want that, we preventDefault.
+  if(!evt._isScroller) {
+    evt.preventDefault()
+  }
+})
+&lt;/script&gt;
+&lt;/html&gt;
+</code></pre><p> 效果体验：<a href="http://t.cn/R9LKUjc" target="_blank" rel="external">http://t.cn/R9LKUjc</a></p>
+<p> 如果还是不会的， 可以看github的這个项目 <a href="https://github.com/luster-io/prevent-overscroll/blob/master/index.html" target="_blank" rel="external">地址</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Q50NRBL.jpg&quot; alt=&quot;一碗汤不热&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="微信" scheme="http://javaweb.win/categories/%E5%BE%AE%E4%BF%A1/"/>
+    
+    
+      <category term="微信" scheme="http://javaweb.win/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+      <category term="链接" scheme="http://javaweb.win/tags/%E9%93%BE%E6%8E%A5/"/>
+    
+      <category term="禁止查看网址" scheme="http://javaweb.win/tags/%E7%A6%81%E6%AD%A2%E6%9F%A5%E7%9C%8B%E7%BD%91%E5%9D%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>苹果免越狱、安卓一键转发朋友圈小视频软件</title>
     <link href="http://javaweb.win/2017/07/07/site9/"/>
     <id>http://javaweb.win/2017/07/07/site9/</id>
     <published>2017-07-07T09:13:31.000Z</published>
-    <updated>2017-07-07T09:47:58.111Z</updated>
+    <updated>2017-07-27T13:41:48.958Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://i.imgur.com/0c9w9Cp.jpg" alt="微信"></p>
 <a id="more"></a>
 <h1 id="苹果免越狱、安卓一键转发朋友圈小视频软件"><a href="#苹果免越狱、安卓一键转发朋友圈小视频软件" class="headerlink" title="苹果免越狱、安卓一键转发朋友圈小视频软件"></a>苹果免越狱、安卓一键转发朋友圈小视频软件</h1><h1 id="安卓苹果ios微信朋友圈一键转发-营销助手-微友-微商达人-安卓精灵-微商管家7-0-水晶至尊-一键转发小视频软件工具神器"><a href="#安卓苹果ios微信朋友圈一键转发-营销助手-微友-微商达人-安卓精灵-微商管家7-0-水晶至尊-一键转发小视频软件工具神器" class="headerlink" title="安卓苹果ios微信朋友圈一键转发,营销助手,微友,微商达人,安卓精灵,微商管家7.0,水晶至尊,一键转发小视频软件工具神器"></a>安卓苹果ios微信朋友圈一键转发,营销助手,微友,微商达人,安卓精灵,微商管家7.0,水晶至尊,一键转发小视频软件工具神器</h1><p>苹果微信多开，自动抢红包，修改微信步数，自动抢群红包，延迟抢红包，群聊过滤，消息防撤回，密友聊天，抢到红包随机回复感谢语，自动收账，收帐回复，修改位置信息，更好听的微信消息提示音</p>
 <p><img src="http://i.imgur.com/eum8diE.jpg" alt="微信多开"><br><img src="http://i.imgur.com/3rH6oCZ.jpg" alt="微信多开"></p>
-<h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p><a href="https://gdzios.kuaizhan.com/" target="_blank" rel="external">永久更新地址</a></p>
+<h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p><a href="http://gdzios.xlphp.net/" target="_blank" rel="external">永久更新地址</a></p>
 ]]></content>
     
     <summary type="html">
