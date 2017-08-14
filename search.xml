@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[command not found解决方案]]></title>
+    <url>%2F2017%2F08%2F13%2Fwork1%2F</url>
+    <content type="text"><![CDATA[最近最近一直在忙着面试，没有太多的时间去写文，有时候很想写点什么，记录点什么，但是总是没有静下心去沉淀，之前的微信公众号因为发表了一些非法关键词被投诉封号，趁现在有时间把微信公众号二维码都换一下，还有就是博客之前一直是用的网易云跟帖，可是在8月1日 却暂停服务了，至于为什么我不关心，我关心我的留言评论系统….. 事情 微信公众号二维码 留言评论插件更换 解决command not found 分析为什么我会出现这种情况 $ hexo c Usage: hexo &lt;command&gt; 难道是很久没用，变质了？ /捂脸 接着输入一系列的命令 检查各个工具是否完好 $ npm -v 4.2.0 $ node -v v7.10.0 感觉都没有问题的，纳闷一小会儿，想到上次一个试岗机会，搭建idea maven环境时，重新修改了环境变量path的路径： 好吧 既然是這样 那就改回来呗，找到nodejs的安装路径，里面的bin路径C:\Program Files\nodejs\node_modules\npm\bin 每个人的可能会不太一样。 附环境变量： 环境变量是在操作系统中一个具有特定名字的对象，它包含了一个或者多个应用程序所将使用到的信息。 例如Windows和DOS操作系统中的path环境变量，当要求系统运行一个程序而没有告诉它程序所在的完整路径时，系统除了在当前目录下面寻找此程序外，还应到path中指定的路径去找。用户通过设置环境变量，来更好的运行进程。 环境变量一般是指在操作系统中用来指定操作系统运行环境的一些参数，比如临时文件夹位置和系统文件夹位置等。]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>git</tag>
+        <tag>command not found</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[微信打开链接禁止页面下拉查看网址]]></title>
-    <url>%2F2017%2F07%2F27%2Fwork%2F</url>
+    <url>%2F2017%2F07%2F27%2Fwork0%2F</url>
     <content type="text"><![CDATA[最近为了给大家分享一些好玩有趣的软件，重新弄了几个网页。 然后，网页写完了，上线后，发现在手机微信上面打开，下拉就能看到链接，然而我那几个域名呢，都没有经过icp备案，无奈啊，打开老是提示下面這个這个真的是很无奈呀，严重影响使用，这tx也是霸道，但是也没办法，只好妥协，换域名呗 话归正题，换了一个备案的二级域名之后，打开链接秒打开呀，但是问题又来了，打开之后，下拉页面，就把我这链接给暴露了，那么怎么能不让这链接地址显示出来呢？？默默的去看了一下文档，总算给解决了 $(‘body’).on(‘touchmove’, function (event) {event.preventDefault();}); or document.addEventListener(&apos;touchmove&apos;, function(e){e.preventDefault()}, false); 但是這样会把原生的scroll效果也一同去掉了，毕竟这类事件是手机touchmova默认的事件行为，js直接来隐藏事件虐显尴尬。 那么咱们就来个好点的 這段js代码 就能固定页面 ，用户不能下拉页面滴， 這样也就达成我的目的， &lt;!doctype html&gt; &lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;utf-8&quot;&gt; &lt;/head&gt; &lt;body&gt; &lt;div class=&quot;scroll&quot; style=&quot;position:absolute; overflow:scroll; -webkit-overflow-scrolling: touch; top:0; left:0; bottom:0; right:0&quot;&gt; &lt;!--你的代码-- &gt; &lt;/div&gt; &lt;/body&gt; &lt;script&gt; var overscroll = function(el) { el.addEventListener(&apos;touchstart&apos;, function() { var top = el.scrollTop , totalScroll = el.scrollHeight , currentScroll = top + el.offsetHeight //If we&apos;re at the top or the bottom of the containers //scroll, push up or down one pixel. // //this prevents the scroll from &quot;passing through&quot; to //the body. if(top === 0) { el.scrollTop = 1 } else if(currentScroll === totalScroll) { el.scrollTop = top - 1 } }) el.addEventListener(&apos;touchmove&apos;, function(evt) { //if the content is actually scrollable, i.e. the content is long enough //that scrolling can occur if(el.offsetHeight &lt; el.scrollHeight) evt._isScroller = true }) } overscroll(document.querySelector(&apos;.scroll&apos;)); document.body.addEventListener(&apos;touchmove&apos;, function(evt) { //In this case, the default behavior is scrolling the body, which //would result in an overflow. Since we don&apos;t want that, we preventDefault. if(!evt._isScroller) { evt.preventDefault() } }) &lt;/script&gt; &lt;/html&gt; 效果体验：http://t.cn/R9LKUjc 如果还是不会的， 可以看github的這个项目 地址]]></content>
       <categories>
         <category>微信</category>
@@ -123,7 +136,7 @@
   </entry>
   <entry>
     <title><![CDATA[MarkdownPad免费激活注册]]></title>
-    <url>%2F2017%2F05%2F16%2Fwrit%2F</url>
+    <url>%2F2017%2F05%2F16%2Fsite1%2F</url>
     <content type="text"><![CDATA[简介MarkdownPad 是 Windows 平台上一个功能完善的 Markdown 编辑器。应该说是最好用的了。但是免费版有一些限制，还好终于找到了可用的专业版激活码，免费共享给大家。 提供了语法高亮和方便的快捷键功能，给您最好的 Markdown 编写体验。 来试一下： 粗体 (Ctrl+B) and 斜体 (Ctrl+I)引用 (Ctrl+Q)代码块 (Ctrl+K)标题 1, 2, 3 (Ctrl+1, Ctrl+2, Ctrl+3)列表 (Ctrl+U and Ctrl+Shift+O)实时预览，所见即所得 无需猜测您的语法是否正确；每当您敲击键盘，实时预览功能都会立刻准确呈现出文档的显示效果。 为高级用户而设计的稳定的 Markdown编辑器 MarkdownPad 支持多种 Markdown解析引擎，包括 标准 Markdown 、 Markdown 扩展 (包括表格支持) 以及 GitHub 风格 Markdown。 有了标签式多文档界面、PDF 导出、内置的图片上传工具、会话管理、拼写检查、自动保存、语法高亮以及内置的 CSS 管理器，您可以随心所欲地使用 MarkdownPad。 激活信息邮箱地址： Soar360@live.com 授权秘钥： GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE8qHqNY5QaaRxmO3YSMHxlv2EYpjdwLcPwfeTG7kUdnhKE0vVy4RidP6Y2wZ0q74f47fzsZo45JE2hfQBFi2O9Jldjp1mW8HUpTtLA2a5/sQytXJUQl/QKO0jUQY4pa5CCx20sV1ClOTZtAGngSOJtIOFXK599sBr5aIEFyH0K7H4BoNMiiDMnxt1rD8Vb/ikJdhGMMQr0R4B+L3nWU97eaVPTRKfWGDE8/eAgKzpGwrQQoDh+nzX1xoVQ8NAuH+s4UcSeQ== 其他不知道为何，MarkdownPad 2 的注册私钥泄密了，按照这个逻辑，是可以做成一个注册机的。附送私钥如下。 -----BEGIN RSA PRIVATE KEY----- Proc-Type: 4,ENCRYPTED DEK-Info: DES-EDE3-CBC,CCE015B0820B9A3F 4BiGKVEzt+cLBdilEZR+8Y0YHrarjNX4bT5XbQ5BgTcJwMYnARCKib+BgwX9wPUB 3D7PUwt4m4OGemXXcC4ELUFyMqHIT6SILFSdTTIvnQbsWutx44zyJK9SlP/2uhG8 JIUDdLWVv5kS8J/UcInC5bomKZ5SX3+0ziRpLWkgXoHJ5gjQ+fDNzAKLcNn7Bubq znjoSH8XuGnORp7d4FiRT5Vl9WpnBqyyFSkYwzDOK//iFgHyhYZ5BCInfQMX66Cj wk3Pax/ujSDzYalkkJe8o8VAcEisMoYhSTS9BnRpROn6V4UyAugWMPnEOgiBmO42 HwLoqK7WXCe+wS1UiDnECU2wIU5Z8qL5oKEKFGukakK+mYXh8MHTkYq2ZQZBo8Vy venhBaolrViCWdkJ5MsuqarBJjyCeAS38GAJURxsKnd+Bp7gGAlNI/0OWIcrjIi4 4o/0CaYRHR+PdeuJup5rUKPgGfMW0iOwmMncSM19hIiaU4/hHGYeXrL1aKfZX4ML YxWJ/i6u8U3gcJo/bOvjirxUZOLTfv3n5aDTcxU70ejgmmYLBaxKt32Ib9oLwnL8 AUnWNRPZaNJ/X853ybsGu73vA/6HPw63g0EaNharg21Q1IhuggMvHJiN6Z9d4KGg Vio6++15SVcsyQEGZx+jjv95IEfgwUQXBmkNRZ/KJQQLkKuOuXuvakI5sWdNJLRo xY9W2lHMnY/Yi82V4P5odxFZOmAYK5DHCQ47gw9IzqGjCyxATAYgkoZR+PCP5y9n IZ8oRYbNpykXVvQC0JALgixIZaAjj30wXb1CcD3layQNkrp0O4qVzuqyT7e2aKEq XNeoB0uDNvn10L60QAOG5630uIIFRyXphZgrzScp97ABq7STQ7t4zTZhbmiwnPHq 8xft+mO2rW3puYEHoEkQKwJcPUTpR/s67IIXQMs1y93WpJoOw7doumyNtAoR8EfK m/H4UoJhoiXL755n4CGnET+LEtuFO/0UwdWxj+u503ovWL021DAnKhrGPMpo73ga aL/OBSFSFyxY92qGqfMWNQOaoK5hCRhzp/8Pd+B1tjhnxUNOl1ulytmhJBigU5nV arkgJYmG+Ox15f1YWxmD1EhLOQLUgBruG04cjRnG4LXV+UBKRdcS3bECArFutlTw 6ogbi8cbDJNBbGpnlfIbEgGEe423rCTuoLJcIZfIDvPDsMobd9lCgn2o95N3Ey4U +UT1PEDEhXW0nggdvZGy8y4T0ZIJ6Tn4asWHTsqH1fQYEz3H51pMehfCbxbc6Bbh nuNyrjv0NSNJvOAn71tFPRf6vgO83h5EFS0ov5ASbWchuf7BFpebmOO04aVMXPBe 3nfE1L5in5ApK7AyhfdSPpELCxBUQ0av4k/0yw/P2TRllybgjdoXjlsJqBn7rkqr 4u1H7pytlEWt0mSgZenlGXrOOEaknUe40z9BHNxliA7ET1MQk6veFVfbSFjeVUDk fsFAVE88/KHyMMfGwwcuLdnQnOBHNJ8iJjJF+RZy93QzveZB22+m5cl9SNXIMcEA mOm4Q8CaLwwzZmF9NKV2CjlmUTqOszJv5abS5YdrPavAR6QxGjZfya3nA2ASd6HN -----END RSA PRIVATE KEY----- 原文地址]]></content>
       <categories>
         <category>工具</category>
@@ -136,7 +149,7 @@
   </entry>
   <entry>
     <title><![CDATA[微信小程序开发之转发功能]]></title>
-    <url>%2F2017%2F05%2F16%2Fsite%2F</url>
+    <url>%2F2017%2F05%2F16%2Fsite0%2F</url>
     <content type="text"><![CDATA[前言之前无聊的时间调试了一个微信小程序。利用一个美女图片的api做的一个微信美女图片浏览的小程序，之前也没有做过,后面上线了发现没有转发分享功能，这点感觉很不爽啊，怎么能没有转发这种高逼格的功能呢？ 赶紧打开微信开发工具 首先参考了一下:官方文档 关键然后添加转发的显示按钮 wx.showShareMenu({ withShareTicket: true }) 这里有很多朋友不知道“path”路径该怎么填，其实就是填当前页面的路径比如我的：页面的路径加id,这个id就是小程序的场景值：这个path路径填正确了，转发后朋友们才能点金进入小程序完成后，点击右上角有转发功能 真机测试也能进去就OK了。]]></content>
       <categories>
         <category>微信小程序</category>

@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>http://javaweb.win/2017/08/13/work1/</loc>
+    <lastmod>2017-08-13T15:08:27.418Z</lastmod>
+    <data>
+        <display>
+        <title>command not found解决方案</title>
+        <pubTime>2017-08-13T13:52:25.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>git</tag>
+         
+        <tag>command not found</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="http://javaweb.win/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>http://javaweb.win/2017/07/07/site9/</loc>
     <lastmod>2017-07-27T14:51:48.672Z</lastmod>
     <data>
@@ -44,7 +69,7 @@
 
     
   <url>
-    <loc>http://javaweb.win/2017/07/27/work/</loc>
+    <loc>http://javaweb.win/2017/07/27/work0/</loc>
     <lastmod>2017-07-27T14:28:24.791Z</lastmod>
     <data>
         <display>
@@ -229,7 +254,7 @@
 
     
   <url>
-    <loc>http://javaweb.win/2017/05/16/writ/</loc>
+    <loc>http://javaweb.win/2017/05/16/site1/</loc>
     <lastmod>2017-07-07T08:51:34.048Z</lastmod>
     <data>
         <display>
@@ -253,7 +278,7 @@
 
     
   <url>
-    <loc>http://javaweb.win/2017/05/16/site/</loc>
+    <loc>http://javaweb.win/2017/05/16/site0/</loc>
     <lastmod>2017-07-07T08:48:47.224Z</lastmod>
     <data>
         <display>
@@ -275,7 +300,6 @@
     </data>
     </url>
 
-    
     
     
     

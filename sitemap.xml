@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://javaweb.win/2017/08/13/work1/</loc>
+    
+    <lastmod>2017-08-13T15:08:27.418Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://javaweb.win/about/index.html</loc>
+    
+    <lastmod>2017-08-13T13:54:38.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://javaweb.win/2017/07/07/site9/</loc>
     
     <lastmod>2017-07-27T14:51:48.672Z</lastmod>
@@ -9,7 +23,7 @@
   </url>
   
   <url>
-    <loc>http://javaweb.win/2017/07/27/work/</loc>
+    <loc>http://javaweb.win/2017/07/27/work0/</loc>
     
     <lastmod>2017-07-27T14:28:24.791Z</lastmod>
     
@@ -65,23 +79,16 @@
   </url>
   
   <url>
-    <loc>http://javaweb.win/2017/05/16/writ/</loc>
+    <loc>http://javaweb.win/2017/05/16/site1/</loc>
     
     <lastmod>2017-07-07T08:51:34.048Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://javaweb.win/2017/05/16/site/</loc>
+    <loc>http://javaweb.win/2017/05/16/site0/</loc>
     
     <lastmod>2017-07-07T08:48:47.224Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://javaweb.win/about/index.html</loc>
-    
-    <lastmod>2017-06-23T05:58:13.090Z</lastmod>
     
   </url>
   
