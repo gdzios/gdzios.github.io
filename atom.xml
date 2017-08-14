@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>一碗不热的汤</title>
+  <title>javaweb</title>
   <subtitle>既然青春留不住 不如做个大叔好</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -9,7 +9,7 @@
   <id>http://javaweb.win/</id>
   
   <author>
-    <name>CH</name>
+    <name>CHEN</name>
     
   </author>
   
@@ -17,8 +17,8 @@
   
   <entry>
     <title>command not found解决方案</title>
-    <link href="http://javaweb.win/2017/08/13/work1/"/>
-    <id>http://javaweb.win/2017/08/13/work1/</id>
+    <link href="http://javaweb.win/2017/08/13/command%20not%20found%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://javaweb.win/2017/08/13/command not found解决方案/</id>
     <published>2017-08-13T13:52:25.000Z</published>
     <updated>2017-08-14T15:13:24.872Z</updated>
     
@@ -67,8 +67,8 @@ v7.10.0
   
   <entry>
     <title>微信打开链接禁止页面下拉查看网址</title>
-    <link href="http://javaweb.win/2017/07/27/work0/"/>
-    <id>http://javaweb.win/2017/07/27/work0/</id>
+    <link href="http://javaweb.win/2017/07/27/%E5%BE%AE%E4%BF%A1%E6%89%93%E5%BC%80%E9%93%BE%E6%8E%A5%E7%A6%81%E6%AD%A2%E9%A1%B5%E9%9D%A2%E4%B8%8B%E6%8B%89%E6%9F%A5%E7%9C%8B%E7%BD%91%E5%9D%80/"/>
+    <id>http://javaweb.win/2017/07/27/微信打开链接禁止页面下拉查看网址/</id>
     <published>2017-07-27T13:52:25.000Z</published>
     <updated>2017-07-27T14:28:24.791Z</updated>
     
@@ -79,7 +79,7 @@ v7.10.0
 <p>话归正题，换了一个备案的二级域名之后，打开链接秒打开呀，但是问题又来了，打开之后，下拉页面，就把我这链接给暴露了，那么怎么能不让这链接地址显示出来呢？？<img src="http://i.imgur.com/YuY9ttz.jpg" alt="一碗汤不热"><br>默默的去看了一下文档，总算给解决了</p>
 <pre><code>$(‘body’).on(‘touchmove’, function (event) {event.preventDefault();});
 or
-document.addEventListener(&apos;touchmove&apos;, function(e){e.preventDefault()}, false);
+document.addEventListener(&#39;touchmove&#39;, function(e){e.preventDefault()}, false);
 </code></pre><p>但是這样会把原生的scroll效果也一同去掉了，毕竟这类事件是手机touchmova默认的事件行为，js直接来隐藏事件虐显尴尬。</p>
 <p>那么咱们就来个好点的<br><img src="http://i.imgur.com/YCNznLM.png" alt="一碗汤不热"></p>
 <p>這段js代码 就能固定页面 ，用户不能下拉页面滴，</p>
@@ -97,11 +97,11 @@ document.addEventListener(&apos;touchmove&apos;, function(e){e.preventDefault()}
 
 &lt;script&gt;
 var overscroll = function(el) {
-  el.addEventListener(&apos;touchstart&apos;, function() {
+  el.addEventListener(&#39;touchstart&#39;, function() {
     var top = el.scrollTop
       , totalScroll = el.scrollHeight
       , currentScroll = top + el.offsetHeight
-    //If we&apos;re at the top or the bottom of the containers
+    //If we&#39;re at the top or the bottom of the containers
     //scroll, push up or down one pixel.
     //
     //this prevents the scroll from &quot;passing through&quot; to
@@ -112,17 +112,17 @@ var overscroll = function(el) {
       el.scrollTop = top - 1
     }
   })
-  el.addEventListener(&apos;touchmove&apos;, function(evt) {
+  el.addEventListener(&#39;touchmove&#39;, function(evt) {
     //if the content is actually scrollable, i.e. the content is long enough
     //that scrolling can occur
     if(el.offsetHeight &lt; el.scrollHeight)
       evt._isScroller = true
   })
 }
-overscroll(document.querySelector(&apos;.scroll&apos;));
-document.body.addEventListener(&apos;touchmove&apos;, function(evt) {
+overscroll(document.querySelector(&#39;.scroll&#39;));
+document.body.addEventListener(&#39;touchmove&#39;, function(evt) {
   //In this case, the default behavior is scrolling the body, which
-  //would result in an overflow.  Since we don&apos;t want that, we preventDefault.
+  //would result in an overflow.  Since we don&#39;t want that, we preventDefault.
   if(!evt._isScroller) {
     evt.preventDefault()
   }
@@ -152,8 +152,8 @@ document.body.addEventListener(&apos;touchmove&apos;, function(evt) {
   
   <entry>
     <title>苹果免越狱、安卓一键转发朋友圈小视频软件</title>
-    <link href="http://javaweb.win/2017/07/07/site9/"/>
-    <id>http://javaweb.win/2017/07/07/site9/</id>
+    <link href="http://javaweb.win/2017/07/07/%E8%8B%B9%E6%9E%9C%E5%85%8D%E8%B6%8A%E7%8B%B1%E3%80%81%E5%AE%89%E5%8D%93%E4%B8%80%E9%94%AE%E8%BD%AC%E5%8F%91%E6%9C%8B%E5%8F%8B%E5%9C%88%E5%B0%8F%E8%A7%86%E9%A2%91%E8%BD%AF%E4%BB%B6/"/>
+    <id>http://javaweb.win/2017/07/07/苹果免越狱、安卓一键转发朋友圈小视频软件/</id>
     <published>2017-07-07T09:13:31.000Z</published>
     <updated>2017-07-27T14:51:48.672Z</updated>
     
@@ -199,8 +199,8 @@ document.body.addEventListener(&apos;touchmove&apos;, function(evt) {
   
   <entry>
     <title>阶段性项目开发总结</title>
-    <link href="http://javaweb.win/2017/06/28/site8/"/>
-    <id>http://javaweb.win/2017/06/28/site8/</id>
+    <link href="http://javaweb.win/2017/06/28/%E9%98%B6%E6%AE%B5%E6%80%A7%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%80%BB%E7%BB%93/"/>
+    <id>http://javaweb.win/2017/06/28/阶段性项目开发总结/</id>
     <published>2017-06-28T06:37:30.000Z</published>
     <updated>2017-07-17T02:51:36.247Z</updated>
     
@@ -233,8 +233,8 @@ document.body.addEventListener(&apos;touchmove&apos;, function(evt) {
   
   <entry>
     <title>JSP Standard Tag Library</title>
-    <link href="http://javaweb.win/2017/06/23/site7/"/>
-    <id>http://javaweb.win/2017/06/23/site7/</id>
+    <link href="http://javaweb.win/2017/06/23/JSP%20Standard%20Tag%20Library/"/>
+    <id>http://javaweb.win/2017/06/23/JSP Standard Tag Library/</id>
     <published>2017-06-23T02:32:29.000Z</published>
     <updated>2017-07-07T09:07:24.430Z</updated>
     
@@ -303,8 +303,8 @@ document.body.addEventListener(&apos;touchmove&apos;, function(evt) {
   
   <entry>
     <title>EL表达式</title>
-    <link href="http://javaweb.win/2017/06/19/site6/"/>
-    <id>http://javaweb.win/2017/06/19/site6/</id>
+    <link href="http://javaweb.win/2017/06/19/EL%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>http://javaweb.win/2017/06/19/EL表达式/</id>
     <published>2017-06-19T05:43:13.000Z</published>
     <updated>2017-07-07T09:06:53.496Z</updated>
     
@@ -392,8 +392,8 @@ applicationScope
   
   <entry>
     <title>基于Next主题美化教程(密码：gdzios)</title>
-    <link href="http://javaweb.win/2017/06/08/site5/"/>
-    <id>http://javaweb.win/2017/06/08/site5/</id>
+    <link href="http://javaweb.win/2017/06/08/%E5%9F%BA%E4%BA%8ENext%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B/"/>
+    <id>http://javaweb.win/2017/06/08/基于Next主题美化教程/</id>
     <published>2017-06-08T08:24:15.000Z</published>
     <updated>2017-07-24T13:34:21.348Z</updated>
     
@@ -439,7 +439,7 @@ applicationScope
 <h1 id="为Hexo-Next主题添加哈林摇特效"><a href="#为Hexo-Next主题添加哈林摇特效" class="headerlink" title="为Hexo Next主题添加哈林摇特效"></a>为Hexo Next主题添加哈林摇特效</h1><h2 id="实现效果图-1"><a href="#实现效果图-1" class="headerlink" title="实现效果图"></a>实现效果图</h2><p>点击下面图片看视频效果</p>
 <p><a href="http://v.youku.com/v_show/id_XMTY0ODY1Nzk0MA==.html" target="_blank" rel="external"><img src="http://i.imgur.com/n0gANjq.png" alt=""></a></p>
 <h2 id="具体实现方法-1"><a href="#具体实现方法-1" class="headerlink" title="具体实现方法"></a>具体实现方法</h2><h3 id="创建特效文件"><a href="#创建特效文件" class="headerlink" title="创建特效文件"></a>创建特效文件</h3><p>在主题目录中，创建<code>layout\_macro\high.swig</code>，添加如下代码：</p>
-<pre><code>  &lt;a title=&quot;收藏到书签，偶尔High一下^_^&quot; rel=&quot;alternate&quot; class=&quot;mw-harlem_shake_slow wobble shake&quot; href=&apos;javascript:(function() {
+<pre><code>  &lt;a title=&quot;收藏到书签，偶尔High一下^_^&quot; rel=&quot;alternate&quot; class=&quot;mw-harlem_shake_slow wobble shake&quot; href=&#39;javascript:(function() {
     function c() {
         var e = document.createElement(&quot;link&quot;);
         e.setAttribute(&quot;type&quot;, &quot;text/css&quot;);
@@ -588,7 +588,7 @@ applicationScope
             O.push(A)
         }
     }
-})()&apos;&gt;&lt;i class=&quot;fa fa-music&quot;&gt;&lt;/i&gt; High&lt;/a&gt;
+})()&#39;&gt;&lt;i class=&quot;fa fa-music&quot;&gt;&lt;/i&gt; High&lt;/a&gt;
 </code></pre><h3 id="引用特效代码"><a href="#引用特效代码" class="headerlink" title="引用特效代码"></a>引用特效代码</h3><p>在侧边栏，引用特效代码。在主题目录，修改<code>layout\_macro\sidebar.swig</code>：</p>
 <pre><code>{% include 'high.swig' %}
 </code></pre><p><img src="http://www.iamlj.com/2016/08/add-special-effect-harlem-shake-for-hexo/20160802003240.png" alt="公众号gdz_hz"></p>
@@ -604,21 +604,21 @@ applicationScope
 <h2 id="具体实现方法-2"><a href="#具体实现方法-2" class="headerlink" title="具体实现方法"></a>具体实现方法</h2><p>在浏览器输入如下网址：</p>
 <pre><code>http://7u2ss1.com1.z0.glb.clouddn.com/love.js
 </code></pre><p>然后将里面的代码<code>copy</code>一下，新建<code>love.js</code>文件并且将代码复制进去，然后保存。将<code>love.js</code>文件放到路径<code>/themes/next/source/js/src</code>里面，然后打开<code>\themes\next\layout\_layout.swig</code>文件,在末尾（在前面引用会出现找不到的bug）添加以下代码：</p>
-<pre><code>&lt;!-- 页面点击小红心 --&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/love.js&quot;&gt;&lt;script&gt;
+<pre><code> &lt;!-- 页面点击小红心 --&gt;
+ &lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/love.js&quot;&gt;&lt;script&gt;
 </code></pre><h1 id="修改文章内链接文本样式"><a href="#修改文章内链接文本样式" class="headerlink" title="修改文章内链接文本样式"></a>修改文章内链接文本样式</h1><h2 id="实现效果图-2"><a href="#实现效果图-2" class="headerlink" title="实现效果图"></a>实现效果图</h2><p><img src="http://upload-images.jianshu.io/upload_images/5308475-8cc4fc18c399af7e.gif?imageMogr2/auto-orient/strip" alt=""></p>
 <h2 id="具体实现方法-3"><a href="#具体实现方法-3" class="headerlink" title="具体实现方法"></a>具体实现方法</h2><p>修改文件 <code>themes\next\source\css\_common\components\post\post.styl</code>，在末尾添加如下<code>css</code>样式，：</p>
-<pre><code>// 文章内链接文本样式
-.post-body p a{
-color: #0593d3;
-  border-bottom: none;
-    border-bottom: 1px solid #0593d3;
-      &amp;:hover {
-         color: #fc6423;
-          border-bottom: none;
-              border-bottom: 1px solid #fc6423;
-         }
-  }
+<pre><code> // 文章内链接文本样式
+ .post-body p a{
+ color: #0593d3;
+   border-bottom: none;
+     border-bottom: 1px solid #0593d3;
+       &amp;:hover {
+          color: #fc6423;
+           border-bottom: none;
+               border-bottom: 1px solid #fc6423;
+          }
+   }
 </code></pre><p>其中选择<code>.post-body</code> 是为了不影响标题，选择<code>p</code>是为了不影响首页“阅读全文”的显示样式,颜色可以自己定义。</p>
 <h1 id="修改文章底部的那个带-号的标签"><a href="#修改文章底部的那个带-号的标签" class="headerlink" title="修改文章底部的那个带#号的标签"></a>修改文章底部的那个带#号的标签</h1><p>实现效果图</p>
 <p><img src="http://i.imgur.com/AjfCJpn.png" alt=""><br>具体实现方法</p>
@@ -626,23 +626,23 @@ color: #0593d3;
 <h1 id="在每篇文章末尾统一添加“本文结束”标记"><a href="#在每篇文章末尾统一添加“本文结束”标记" class="headerlink" title="在每篇文章末尾统一添加“本文结束”标记"></a>在每篇文章末尾统一添加“本文结束”标记</h1><p>实现效果图</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/5308475-90be73acbc5f8a7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>具体实现方法</p>
 <p>在路径 <code>\themes\next\layout\_macro</code> 中新建 <code>passage-end-tag.swig</code> 文件,并添加以下内容：</p>
-<pre><code>&lt;div&gt;
-    {% if not is_index %}
+<pre><code> &lt;div&gt;
+     {% if not is_index %}
 	             <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
 	             {% endif %}
-            &lt;/div&gt;
+             &lt;/div&gt;
 </code></pre><p>接着打开<code>\themes\next\layout\_macro\post.swig</code>文件，在<code>post-body</code> 之后， <code>post-footer</code> 之前添加如下画红色部分代码（<code>post-footer</code>之前两个<code>DIV</code>）：</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/5308475-865c7f94f89b907e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <p>代码如下：</p>
-<pre><code>&lt;div&gt;
-  {% if not is_index %}
+<pre><code> &lt;div&gt;
+   {% if not is_index %}
 	       {% include 'passage-end-tag.swig' %}
 	         {% endif %}
-  &lt;/div&gt;
+   &lt;/div&gt;
 </code></pre><p>然后打开主题配置文件（<code>_config.yml</code>),在末尾添加：</p>
-<pre><code>#文章末尾添加“本文结束”标记
-   passage_end_tag:
-    enabled: true
+<pre><code> #文章末尾添加“本文结束”标记
+    passage_end_tag:
+     enabled: true
 </code></pre><p>完成以上设置之后，在每篇文章之后都会添加如上效果图的样子。</p>
 <h1 id="修改作者头像并旋转"><a href="#修改作者头像并旋转" class="headerlink" title="修改作者头像并旋转"></a>修改作者头像并旋转</h1><p>实现效果图</p>
 <p>直接看我的<a href="http://javaweb.win">博客</a>吧，鼠标移动到头像</p>
@@ -706,20 +706,20 @@ img:hover {
 <pre><code>$ npm install gulp -g
 $ npm install gulp-minify-css gulp-uglify gulp-htmlmin gulp-htmlclean gulp --save
 </code></pre><p>在如下图所示，新建 <code>gulpfile.js</code> ，并填入以下内容：</p>
-<pre><code>var gulp = require(&apos;gulp&apos;);
-var minifycss = require(&apos;gulp-minify-css&apos;);
-var uglify = require(&apos;gulp-uglify&apos;);
-var htmlmin = require(&apos;gulp-htmlmin&apos;);
-var htmlclean = require(&apos;gulp-htmlclean&apos;);
+<pre><code>var gulp = require(&#39;gulp&#39;);
+var minifycss = require(&#39;gulp-minify-css&#39;);
+var uglify = require(&#39;gulp-uglify&#39;);
+var htmlmin = require(&#39;gulp-htmlmin&#39;);
+var htmlclean = require(&#39;gulp-htmlclean&#39;);
 // 压缩 public 目录 css
-gulp.task(&apos;minify-css&apos;, function() {
-    return gulp.src(&apos;./public/**/*.css&apos;)
+gulp.task(&#39;minify-css&#39;, function() {
+    return gulp.src(&#39;./public/**/*.css&#39;)
         .pipe(minifycss())
-        .pipe(gulp.dest(&apos;./public&apos;));
+        .pipe(gulp.dest(&#39;./public&#39;));
 });
 // 压缩 public 目录 html
-gulp.task(&apos;minify-html&apos;, function() {
-  return gulp.src(&apos;./public/**/*.html&apos;)
+gulp.task(&#39;minify-html&#39;, function() {
+  return gulp.src(&#39;./public/**/*.html&#39;)
     .pipe(htmlclean())
     .pipe(htmlmin({
          removeComments: true,
@@ -727,17 +727,17 @@ gulp.task(&apos;minify-html&apos;, function() {
          minifyCSS: true,
          minifyURLs: true,
     }))
-    .pipe(gulp.dest(&apos;./public&apos;))
+    .pipe(gulp.dest(&#39;./public&#39;))
 });
 // 压缩 public/js 目录 js
-gulp.task(&apos;minify-js&apos;, function() {
-    return gulp.src(&apos;./public/**/*.js&apos;)
+gulp.task(&#39;minify-js&#39;, function() {
+    return gulp.src(&#39;./public/**/*.js&#39;)
         .pipe(uglify())
-        .pipe(gulp.dest(&apos;./public&apos;));
+        .pipe(gulp.dest(&#39;./public&#39;));
 });
 // 执行 gulp 命令时执行的任务
-gulp.task(&apos;default&apos;, [
-    &apos;minify-html&apos;,&apos;minify-css&apos;,&apos;minify-js&apos;
+gulp.task(&#39;default&#39;, [
+    &#39;minify-html&#39;,&#39;minify-css&#39;,&#39;minify-js&#39;
 ]);
 </code></pre><p>生成博文是执行<code>hexo g &amp;&amp; gulp</code>就会根据 <code>gulpfile.js</code> 中的配置，对<code>public</code>目录中的静态资源文件进行压缩。</p>
 <h1 id="修改-代码块自定义样式"><a href="#修改-代码块自定义样式" class="headerlink" title="修改``代码块自定义样式"></a>修改``代码块自定义样式</h1><p>实现效果图</p>
@@ -834,9 +834,9 @@ post_wordcount:
 <p>打开<code>themes-&gt;next-&gt;layout-&gt;_partials-&gt;head.swig</code>文件,在<head>标签内插入这样一段代码：</head></p>
 <pre><code>&lt;script&gt;
     (function(){
-        if(&apos;{{ page.password }}&apos;){
-            if (prompt(&apos;请输入文章密码&apos;) !== &apos;{{ page.password }}&apos;){
-                alert(&apos;密码错误！&apos;);
+        if(&#39;{{ page.password }}&#39;){
+            if (prompt(&#39;请输入文章密码&#39;) !== &#39;{{ page.password }}&#39;){
+                alert(&#39;密码错误！&#39;);
                 history.back();
             }
         }
@@ -852,8 +852,8 @@ post_wordcount:
 <p>如果你想自定义话，打开<code>themes/next/layout/_partials/share/jiathis.swig</code>修改画红线部分就可以了</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/5308475-68c51498744e1636.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <h1 id="博文置顶"><a href="#博文置顶" class="headerlink" title="博文置顶"></a>博文置顶</h1><p>修改 <code>hero-generator-index</code> 插件，把文件：<code>node_modules/hexo-generator-index/lib/generator.js</code>内的代码替换为：</p>
-<pre><code>&apos;use strict&apos;;
-var pagination = require(&apos;hexo-pagination&apos;);
+<pre><code>&#39;use strict&#39;;
+var pagination = require(&#39;hexo-pagination&#39;);
 module.exports = function(locals){
   var config = this.config;
   var posts = locals.posts;
@@ -870,11 +870,11 @@ module.exports = function(locals){
         }
         else return b.date - a.date; // 都没定义按照文章日期降序排
     });
-  var paginationDir = config.pagination_dir || &apos;page&apos;;
-  return pagination(&apos;&apos;, posts, {
+  var paginationDir = config.pagination_dir || &#39;page&#39;;
+  return pagination(&#39;&#39;, posts, {
     perPage: config.index_generator.per_page,
-    layout: [&apos;index&apos;, &apos;archive&apos;],
-    format: paginationDir + &apos;/%d/&apos;,
+    layout: [&#39;index&#39;, &#39;archive&#39;],
+    format: paginationDir + &#39;/%d/&#39;,
     data: {
       __index: true
     }
@@ -936,8 +936,8 @@ copyright: true
   
   <entry>
     <title>JavaScript正则表达式</title>
-    <link href="http://javaweb.win/2017/06/08/site4/"/>
-    <id>http://javaweb.win/2017/06/08/site4/</id>
+    <link href="http://javaweb.win/2017/06/08/JavaScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>http://javaweb.win/2017/06/08/JavaScript正则表达式/</id>
     <published>2017-06-08T06:29:45.000Z</published>
     <updated>2017-07-07T09:03:37.422Z</updated>
     
@@ -1005,8 +1005,8 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
   
   <entry>
     <title>Java面试集锦：常见的java异常信息</title>
-    <link href="http://javaweb.win/2017/06/05/site3/"/>
-    <id>http://javaweb.win/2017/06/05/site3/</id>
+    <link href="http://javaweb.win/2017/06/05/Java%E9%9D%A2%E8%AF%95%E9%9B%86%E9%94%A6%EF%BC%9A%E5%B8%B8%E8%A7%81%E7%9A%84java%E5%BC%82%E5%B8%B8%E4%BF%A1%E6%81%AF/"/>
+    <id>http://javaweb.win/2017/06/05/Java面试集锦：常见的java异常信息/</id>
     <published>2017-06-05T01:39:28.000Z</published>
     <updated>2017-07-07T09:02:18.680Z</updated>
     
@@ -1190,8 +1190,8 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
   
   <entry>
     <title>为Hexo添加文章置顶功能</title>
-    <link href="http://javaweb.win/2017/06/02/site2/"/>
-    <id>http://javaweb.win/2017/06/02/site2/</id>
+    <link href="http://javaweb.win/2017/06/02/%E4%B8%BAHexo%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6%E5%8A%9F%E8%83%BD/"/>
+    <id>http://javaweb.win/2017/06/02/为Hexo添加文章置顶功能/</id>
     <published>2017-06-02T05:21:30.000Z</published>
     <updated>2017-07-07T08:56:55.654Z</updated>
     
@@ -1217,8 +1217,8 @@ else if(!a.top &amp;&amp; b.top) {
 else return b.date - a.date; // 都没定义按照文章日期降序排
 });
 </code></pre><p><strong>完整文件代码</strong></p>
-<pre><code>`&apos;use strict&apos;;
-var pagination = require(&apos;hexo-pagination&apos;);
+<pre><code>`&#39;use strict&#39;;
+var pagination = require(&#39;hexo-pagination&#39;);
 module.exports = function(locals){
   var config = this.config;
   var posts = locals.posts;
@@ -1235,11 +1235,11 @@ module.exports = function(locals){
         }
         else return b.date - a.date; // 都没定义按照文章日期降序排
     });
-  var paginationDir = config.pagination_dir || &apos;page&apos;;
-  return pagination(&apos;&apos;, posts, {
+  var paginationDir = config.pagination_dir || &#39;page&#39;;
+  return pagination(&#39;&#39;, posts, {
     perPage: config.index_generator.per_page,
-    layout: [&apos;index&apos;, &apos;archive&apos;],
-    format: paginationDir + &apos;/%d/&apos;,
+    layout: [&#39;index&#39;, &#39;archive&#39;],
+    format: paginationDir + &#39;/%d/&#39;,
     data: {
       __index: true
     }
@@ -1247,19 +1247,19 @@ module.exports = function(locals){
 };
 
 
-&apos;use strict&apos;;
+&#39;use strict&#39;;
 
-var pagination = require(&apos;hexo-pagination&apos;);
+var pagination = require(&#39;hexo-pagination&#39;);
 
 module.exports = function(locals) {
   var config = this.config;
   var posts = locals.posts.sort(config.index_generator.order_by);
-  var paginationDir = config.pagination_dir || &apos;page&apos;;
+  var paginationDir = config.pagination_dir || &#39;page&#39;;
 
-  return pagination(&apos;&apos;, posts, {
+  return pagination(&#39;&#39;, posts, {
     perPage: config.index_generator.per_page,
-    layout: [&apos;index&apos;, &apos;archive&apos;],
-    format: paginationDir + &apos;/%d/&apos;,
+    layout: [&#39;index&#39;, &#39;archive&#39;],
+    format: paginationDir + &#39;/%d/&#39;,
     data: {
       __index: true
     }
@@ -1296,8 +1296,8 @@ date: 201-06-01 11:44:40
   
   <entry>
     <title>MarkdownPad免费激活注册</title>
-    <link href="http://javaweb.win/2017/05/16/site1/"/>
-    <id>http://javaweb.win/2017/05/16/site1/</id>
+    <link href="http://javaweb.win/2017/05/16/MarkdownPad%E5%85%8D%E8%B4%B9%E6%BF%80%E6%B4%BB%E6%B3%A8%E5%86%8C/"/>
+    <id>http://javaweb.win/2017/05/16/MarkdownPad免费激活注册/</id>
     <published>2017-05-16T11:01:37.000Z</published>
     <updated>2017-07-07T08:51:34.048Z</updated>
     
@@ -1367,8 +1367,8 @@ mOm4Q8CaLwwzZmF9NKV2CjlmUTqOszJv5abS5YdrPavAR6QxGjZfya3nA2ASd6HN
   
   <entry>
     <title>微信小程序开发之转发功能</title>
-    <link href="http://javaweb.win/2017/05/16/site0/"/>
-    <id>http://javaweb.win/2017/05/16/site0/</id>
+    <link href="http://javaweb.win/2017/05/16/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B9%8B%E8%BD%AC%E5%8F%91%E5%8A%9F%E8%83%BD/"/>
+    <id>http://javaweb.win/2017/05/16/微信小程序开发之转发功能/</id>
     <published>2017-05-16T10:28:08.000Z</published>
     <updated>2017-07-07T08:48:47.224Z</updated>
     
