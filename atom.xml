@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>javaweb</title>
+  <title>EnchHao</title>
   <subtitle>既然青春留不住 不如做个大叔好</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -9,7 +9,7 @@
   <id>http://javaweb.win/</id>
   
   <author>
-    <name>Elliotcw</name>
+    <name>EnchHao</name>
     
   </author>
   
