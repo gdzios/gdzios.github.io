@@ -42,9 +42,9 @@
       <category term="面试" scheme="http://javaweb.win/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="java面试" scheme="http://javaweb.win/tags/java%E9%9D%A2%E8%AF%95/"/>
-    
       <category term="面试" scheme="http://javaweb.win/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="java面试" scheme="http://javaweb.win/tags/java%E9%9D%A2%E8%AF%95/"/>
     
       <category term="面试记录" scheme="http://javaweb.win/tags/%E9%9D%A2%E8%AF%95%E8%AE%B0%E5%BD%95/"/>
     
@@ -1211,6 +1211,8 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
       <category term="java异常" scheme="http://javaweb.win/categories/java/java%E5%BC%82%E5%B8%B8/"/>
     
     
+      <category term="java面试" scheme="http://javaweb.win/tags/java%E9%9D%A2%E8%AF%95/"/>
+    
       <category term="java异常" scheme="http://javaweb.win/tags/java%E5%BC%82%E5%B8%B8/"/>
     
       <category term="异常处理" scheme="http://javaweb.win/tags/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
@@ -1218,8 +1220,6 @@ alert(atr2.match(/\d+/g));//输出1，2，3，1
       <category term="异常信息" scheme="http://javaweb.win/tags/%E5%BC%82%E5%B8%B8%E4%BF%A1%E6%81%AF/"/>
     
       <category term="java学习" scheme="http://javaweb.win/tags/java%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="java面试" scheme="http://javaweb.win/tags/java%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
