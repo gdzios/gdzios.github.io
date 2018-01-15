@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[测试]]></title>
+    <url>%2F2018%2F01%2F02%2F%E6%B5%8B%E8%AF%95%2F</url>
+    <content type="text"><![CDATA[前言]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[更换域名enchhao.com]]></title>
     <url>%2F2017%2F12%2F09%2F%E6%9B%B4%E6%8D%A2%E5%9F%9F%E5%90%8Denchhao.com%2F</url>
     <content type="text"><![CDATA[最近感觉挺累的。 更换域名enchhao.com]]></content>
